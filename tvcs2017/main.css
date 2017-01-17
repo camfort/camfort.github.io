@@ -1,0 +1,246 @@
+div #bar {
+  background-color:#444;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color:#eeeef2;
+  margin: 0px;
+  padding: 8px;
+  padding-left: 20px;
+  padding-top: 12px;
+  padding-bottom: 14px;
+}
+
+#logos img {
+    float:left;
+    margin-right:20px;
+}
+
+#logos {
+    clear:both;
+    float:none;
+}
+
+#details {
+    clear:left;
+}
+
+div #pic {
+ float: right;
+ padding:5px;
+ background-color:#eee;
+}
+
+div #outer {
+  padding: 0px;
+  margin: 0px;
+}
+
+div #content {
+  padding: 10px;
+  margin: 10px;
+  padding-left: 50px;
+  width: 60vw;
+  min-width:600px;
+}
+
+
+div #buttons {
+    margin-top:20px;
+    padding:14px;
+    padding-left: 40px;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+div.button {
+  padding:4px;
+  margin:3px;
+  margin-left:10px;
+  margin-right:10px;
+  text-align:center;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  float:left;
+  border-bottom: solid 2px #c0cddf
+}
+
+div.button2 {
+  padding:4px;
+  margin:0px;
+  margin-left:10px;
+  margin-right:10px;
+  text-align:center;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  float:left;
+  background-color:#fafafa;
+  border-bottom: solid 1px #c0cddf;
+  border-right: solid 1px #c0cddf
+}
+
+div.buttonh {
+  padding:4px;
+  margin:3px;
+  margin-left:10px;
+  margin-right:10px;
+  text-align:center;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  float:left;
+  border-bottom: solid 2px #000;
+}
+
+div.button:hover, div.buttonh:hover {
+  border-bottom: solid 2px #000;
+}
+
+div.button:hover a, div.buttonh:hover a {
+  color: #a0adbf;
+}
+
+div.button2:hover {
+  border-bottom: solid 1px #000;
+  border-right: solid 1px #000;
+}
+
+div.button a, div.button2 a {
+  color:#000;
+  text-decoration: none;
+}
+
+div.buttonh a {
+  color:#dc982a;
+  text-decoration: none;
+}
+ 
+div {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 11pt;
+}
+
+h3 {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+span.listy {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  padding:0px;
+  margin:0px;
+}
+
+h4 {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+a, h4 a, div.content a {
+ color: #404d7f;
+ text-decoration: underline;
+}
+
+.abstract { margin:1em 2em;}
+
+blockquote {
+    background: #f3f3f3; 
+    padding:13px;
+    margin:10px; 
+    text-align:justify; 
+    width: 600px
+}
+
+td {
+ vertical-align: top;   
+}
+
+ul {
+ margin: 0px;
+ margin-bottom: 10px;
+}
+
+tr h4, td h4 {
+    padding: 1px; 
+    margin: 2px;
+    margin-right: 18px;
+}
+
+table {
+    width:100%;
+}
+
+table, td, tr {
+ padding: 0px;
+ margin: 0px;
+ font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+}
+
+
+ul.listy2 li, div.listy2 li {
+  padding-bottom: 10px;   
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 12pt;
+}
+
+ul.listy3 li {
+  padding-bottom: 10px;   
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 350;
+  font-size: 11pt;
+}
+
+div#papers ul {
+  margin: 2px;
+}
+
+ul.teaching li {
+  padding: 3px;
+  font-weight: 300;
+  font-size: 11pt;
+}
+
+p {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 11pt;
+}
+
+span.bold {
+  font-weight: 400;
+}
+
+
+
+div.info {
+ margin-left:15px;
+ font-size:11pt;
+ line-height: 150%;
+ 
+}
+
+td {
+    padding-bottom:3px;
+}
+p, div {
+font-weight:400;
+}
+span.important {
+font-weight:500;
+color:#b00;
+}
+span.title {
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-weight: 500;
+font-size: 14px;
+}
