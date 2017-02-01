@@ -244,3 +244,6 @@ font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 font-weight: 500;
 font-size: 14px;
 }
+span.headinfo {
+margin-bottom: 1em
+}
