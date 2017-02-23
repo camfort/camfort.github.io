@@ -157,7 +157,8 @@ blockquote {
     padding:13px;
     margin:10px; 
     text-align:justify; 
-    width: 600px
+    width:50vw;
+    min-width:500px;
 }
 
 td {
