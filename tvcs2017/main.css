@@ -127,8 +127,8 @@ div {
 
 h3 {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  font-size: 18px;
+  font-weight: bold;
+  font-size: 24px;
 }
 
 span.listy {
@@ -139,15 +139,22 @@ span.listy {
   margin:0px;
 }
 
-h4 {
+span.author {
+    margin: 0; padding: 0;
+}
+
+span.author:after {
+    content: ", "
+}
+
+span.title {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-weight: bold;
   font-size: 16px;
 }
 
-a, h4 a, div.content a {
- color: #404d7f;
- text-decoration: underline;
+a {
+ text-decoration: none;
 }
 
 .abstract { margin:1em 2em;}
@@ -239,11 +246,6 @@ font-weight:400;
 span.important {
 font-weight:500;
 color:#b00;
-}
-span.title {
-font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-font-weight: 500;
-font-size: 14px;
 }
 div.headinfo {
 margin-bottom: 1em

@@ -1,207 +1,328 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>2nd Meeting on Testing and Verification for Computational Science </title>
-<meta name="description" content="" />
-<meta name="keywords" content="" />
-<link rel="stylesheet" href="main.css" type="text/css" media="all" />
-<script type="text/javascript" />
-var par0show = false;
-var par1show = false;
-var par2show = false;
-var par3show = false;
-var par4show = false;
-var par5show = false;
-var par6show = false;
-var par7show = false;
-var par8show = false;
-var par9show = false;
-var par10show = false;
-var par11show = false;
-var par12show = false;
-var par13show = false;
-var par14show = false;
-var par15show = false;
-var par16show = false;
-var par17show = false;
-var par18show = false;
-var par19show = false;
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>2nd Meeting on Testing and Verification for Computational Science </title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="main.css" type="text/css" media="all" />
+  </head>
+  <body>
+
+    <div id="outer" style="width:100%">
+
+      <div id="bar">
+        2<sup>nd</sup> Meeting on Testing and Verification for Computational Science
+      </div>
+
+      <div id="content">
+
+        <div id="logos">
+          <img alt="ucam" src='ucam-logo.gif' style="height:40px;" />
+          <img alt="kent" src='kent-logo.jpg' style="height:70px;position:relative;top:-15px;left:-15px;" />
+          <img alt="epsrc" src='epsrc-logo.png' style="height:50px;position:relative;left:-15px;" />
+          <img alt="ssi" src='ssi-logo.png' style="height:50px;position:relative;left:-15px;" />
+        </div>
+
+        <div id="details">
+          <div class="headinfo"><b>Venue</b>: Computer Laboratory, University of Cambridge, room FW26</div>
+          <div class="headinfo"><b>Date</b>: Tuesday 1:15pm, March 21st 2017</div>
+          <div class="headinfo"><b>Website</b>: <a href="http://camfort.github.io/tvcs2017">http://camfort.github.io/tvcs2017</a></div>
+          <div class="headinfo"><b>Contact</b>: <a
+          href="mailto:matthew.danish@cl.cam.ac.uk">Matthew Danish</a>,
+          <a href="mailto:d.a.orchard@kent.ac.uk">Dominic Orchard</a>, or <a
+          href="mailto:andrew.rice@cl.cam.ac.uk">Andrew Rice</a>.</div>
+        </div>
+
+        <p>
+          The need for more rigorous software verification in computational
+          science is well known. Often the responsibility is placed on the
+          scientist, but increased care and attention is not enough. There is a wealth of research in computer science
+          aimed at automating testing and verification, yet little of this has crossed
+          over into practice in the sciences.
+        </p>
+
+        <p>
+          This meeting provides a forum to discuss recent work and
+          new ideas, and to foster links between researchers
+          interested in the intersection of verification, programming languages, and
+          computational science. The meeting is aimed at both computer scientists
+          and natural/physical scientists employing computational techniques.
+        </p>
+
+        <ul>
+          <li>See the <a
+          href="http://www.cl.cam.ac.uk/~dao29/meeting-tvcs/">first edition of
+          the meeting in 2016</a> for an example of the content.</li>
+        </ul>
+
+        <h3>Program</h3>
+
+        <p>There will be coffee, tea and biscuits in FW26 starting from 1:15 pm for a 1:30 pm start.</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Time</th><th>Event</th><th>Speaker</th><th>Title</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>01:30 pm</td><td>Keynote</td><td>Konrad Hinsen      </td><td><a href="#hinsen">The long road from ideas to bits and back: a traveller's guide to verifiable computational research</a></td></tr>
+            <tr><td>02:30 pm</td><td>Talk   </td><td>Dan Liew           </td><td><a href="#liew">Fun with Floats: Symbolic execution of floating point programs</a></td></tr>
+            <tr><td>02:55 pm</td><td>Break  </td><td>                   </td><td></td></tr>
+            <tr><td>03:10 pm</td><td>Talk   </td><td>Luke Abraham       </td><td><a href="#abraham">How to do virtually everything with the Met Office Unified Model</a></td></tr>
+            <tr><td>03:35 pm</td><td>Talk   </td><td>Alessandro Abate   </td><td><a href="#abate">Sound and Automated Synthesis of Digital Controllers for Continuous Plants</a></td></tr>
+            <tr><td>04:00 pm</td><td>Talk   </td><td>Vicky Kostiou      </td><td><a href="#kostiou">Pathological behaviours of single progenitor model defy inference techniques</a></td></tr>
+            <tr><td>04:25 pm</td><td>Break  </td><td>                   </td><td></td></tr>
+            <tr><td>04:40 pm</td><td>Talk   </td><td>Wadud Miah         </td><td><a href="#miah">Verification of Fortran Codes</a></td></tr>
+            <tr><td>05:05 pm</td><td>Talk   </td><td>Mistral Contrastin </td><td><a href="#contrastin">Verifying spatial properties of stencil computations</a></td></tr>
+            <tr><td>05:30 pm</td><td>Lightning Talk  </td><td>Jonathan Pelham    </td><td>       Using JupyterHub and PySpark to explore large datasets for errors</td></tr>
+            <tr><td>05:35 pm</td><td>Lightning Talk  </td><td>Girish Nivarti     </td><td>       Direct Simulations of Turbulent Flames</td></tr>
+            <tr><td>05:40 pm</td><td>Lightning Talk  </td><td>Paul Hovland       </td><td>       ProVESA: The Program Verification for Extreme-Scale Applications Project        </td></tr>
+            <tr><td>07:00 pm</td><td>Drinks &amp; Dinner</td></tr>
+          </tbody>
+        </table>
 
 
-function reveal(block, state, type) {
-  if (state) {
-    document.getElementById(block).style.display = "none";
-  } else {
-    document.getElementById(block).style.display = "";
-  }
-  return !state;
-}
-</script>
-</head><body>
+        <h3>Logistics</h3>
+        <a target="_blank" href="https://en.wikipedia.org/wiki/William_Gates_Building,_Cambridge#/media/File:University_of_Cambridge_Computer_Laboratory.jpg"><img width="600" alt="William Gates Building" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/University_of_Cambridge_Computer_Laboratory.jpg/2560px-University_of_Cambridge_Computer_Laboratory.jpg"/></a>
+        <p>
+          The <a href="http://www.cl.cam.ac.uk">Computer Laboratory</a> is
+          situated at 15 JJ Thomson Ave (CB3 0FD) on the West Cambridge site (<a target="_blank"
+          href="https://www.google.co.uk/maps/place/University+of+Cambridge+Computer+Laboratory/@52.2108943,0.089538,17z/data=!3m1!4b1!4m2!3m1!1s0x47d8774a3f6e55cd:0xabf8227343e684c7?hl=en"><b>map</b></a>) and is easy to access via public transport.
+        </p>
+        <ul>
+          <li>Train to Cambridge central station (CBG): from <a target="_blank" href="http://ojp.nationalrail.co.uk/service/timesandfares/KGX/CBG/210317/1110/dep/210317/2100/dep">London King Cross</a>, <a target="_blank" href="http://ojp.nationalrail.co.uk/service/timesandfares/LST/CBG/210317/1045/dep/210317/2100/dep">London Liverpool Street</a> or <a target="_blank" href="http://ojp.nationalrail.co.uk/service/timesandfares/PBO/CBG/210317/1100/dep/210317/2100/dep">Peterborough</a>, and then,
+          </li>
+          <li>Bus from Cambridge station to JJ Thomson Ave: Use the <a target="_blank" href="http://www.go-whippet.co.uk/new-route-u/">Universal ('U') bus</a>, which operates every 15 minutes in the direction of Madingley Road Park &amp;
+          Ride. The new bus station is a short walk to the
+          left of the bus departure information board (check for bus bay number), found immediately outside
+          of the train station.</li>
+          <li>Or, cycle hire is also available from Rutland Cycles next to the station, for those who wish to do so, and you can follow <a target="_blank" href="https://cyclestreets.net/journey/56696754/#quietest">this recommended route</a>.</li>
+        </ul>
+        <p>Please contact us if you have any questions.</p>
 
-<div id="outer" style="width:100%">
+        <p>
+          The meeting will be held in <a target="_blank" href="http://www.cl.cam.ac.uk/research/dtg/openroommap/static/?s=FW26"><b>room FW26</b> (click for map)</a> which is on the first floor to the right
+          of the stairs on the west side of the building. We
+          will post signage on the day, but you can enter at reception and ask
+          to be directed.
+        </p>
 
-  <div id="bar">
-    2<sup>nd</sup> Meeting on Testing and Verification for Computational Science 
-  </div>
-  
-<div id="content">
+        <p>
+          For those looking for lunch first, there is a cafe directly below the
+          meeting room, as well as <a href="https://www.cl.cam.ac.uk/misc/localarea/catering.html">other options on the West
+          Cambridge campus</a>.
+        </p>
 
-<div id="logos">
-  <img src='ucam-logo.gif' style="height:40px;" />
-  <img src='kent-logo.jpg' style="height:70px;position:relative;top:-15px;left:-15px;" />
-  <img src='epsrc-logo.png' style="height:50px;position:relative;left:-15px;" />
-  <img src='ssi-logo.png' style="height:50px;position:relative;left:-15px;" />
-</div>
+        <h3>Attending</h3>
+        <p>
 
-<div id="details">
-  <div class="headinfo"><b>Venue</b>: Computer Laboratory, University of Cambridge</div>
-  <div class="headinfo"><b>Date</b>: Tuesday afternoon, March 21st 2017</div>
-  <div class="headinfo"><b>Website</b>: <a href="http://camfort.github.io/tvcs2017">http://camfort.github.io/tvcs2017</a></div>
-  <div class="headinfo"><b>Contact</b>: <a
-  href="mailto:matthew.danish@cl.cam.ac.uk">Matthew Danish</a>,
-  <a href="mailto:d.a.orchard@kent.ac.uk">Dominic Orchard</a>, or <a
-  href="mailto:andrew.rice@cl.cam.ac.uk">Andrew Rice</a>.</div>
-</div>
+          We have a set of speakers and the program will be posted
+          shortly. If you would like to attend, <b>please register via
+          <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSc9xdKid9NtrqIkU-okLARMQ-9TY-x2imhEGxwTdEbCgH1l3g/viewform">the
+          registration form</a></b>.  Registration is free. We plan to
+          go for dinner afterward.
+        </p>
 
-  <p>
-The need for more rigorous software verification in computational
-science is well known. Often the responsibility is placed on the
-scientist, but increased care and attention is not enough. There is a wealth of research in computer science
-aimed at automating testing and verification, yet little of this has crossed
-over into practice in the sciences.
-</p>
+        <h3>Abstracts</h3>
 
-<p>
-This meeting provides a forum to discuss recent work and 
-new ideas, and to foster links between researchers 
-interested in the intersection of verification, programming languages, and
-computational science. The meeting is aimed at both computer scientists
-and natural/physical scientists employing computational techniques.
-</p>
+        <div id="hinsen" class="event">
+          <p>We are very pleased to have <a
+          href="http://dirac.cnrs-orleans.fr/plone/Members/hinsen">Konrad
+          Hinsen</a> from the Centre de Biophysique Moléculaire, Orléans,
+          France and Synchrotron SOLEIL, Saint Aubin, France
+          giving our keynote this year:</p>
 
-<p>
-<ul>
-  <li>See the <a
-  href="http://www.cl.cam.ac.uk/~dao29/meeting-tvcs/">first edition of
-  the meeting in 2016</a> for an example of the content.
-  </li></ul>
-</p>
+          <span class="author">Konrad Hinsen</span>
+          <span class="title">
+            The long road from ideas to bits and back: a traveller's guide to verifiable computational research
+          </span>
+          <div class="abstract">
+            <p>The translation of a scientific question into bit patterns in a
+            computer's memory involves many steps, as does the back-translation
+            of the results of a computation into scientific insight. Each step
+            is a potential source of mistakes, and thus requires some form of
+            verification before we can trust its correctness. In this talk, I
+            will outline appropriate verification approaches for each step,
+            which range from purely human efforts, in particular the critical
+            inspection of formulas and program source code, to fully mechanical
+            procedures such as type or unit checking. I will also adopt a
+            long-term perspective, focussing on the tools, procedures, and
+            teaching curricula that we ought to develop in order to establish a
+            trustworthy verification chain for computational science, even if
+            they require a change of habits compared to today's state of the
+            art. In particular, I will argue for the necessity to develop
+            digital scientific notations as the main human-computer interface of
+            computer-aided research.</p>
 
-<p>
-The meeting will last the afternoon at the Computer Laboratory,
-University of Cambridge, followed by dinner. <b>Estimated start time
-  1pm</b>. The meeting
-is part of the EPSRC project <a href="http://gow.epsrc.ac.uk/NGBOViewGrant.aspx?GrantRef=EP/M026124/1"><i>CamFort: Automated evolution and verification of computational science models</i></a>
-at the Computer Laboratory.
-</p>
+            <p>In the course of this discussion, I will also try to shed some light
+            on a few long-standing mysteries in computational science: Why is
+            testing floating-point code so difficult? Why is it so hard to make
+            scientific computations reproducible?  Why is there less use of
+            static type checking in science, despite it being considered
+            evidently beneficial in computer science?  Why do we trust
+            computations uncritically, even though we witness the unreliability
+            of computing technology in daily life?</p>
+          </div>
+        </div>
 
-  <p>
-  <h3>Keynote</h3>
+        <div id="liew" class="event">
+          <span class="author">Dan Liew</span>
 
-  We are very pleased to have <a
-  href="http://dirac.cnrs-orleans.fr/plone/Members/hinsen">Konrad
-  Hinsen</a> from the Centre de Biophysique Moléculaire, Orléans,
-  France and Synchrotron SOLEIL, Saint Aubin, France
-  giving our keynote this year:
+          <span class="title">
+            Fun with Floats: Symbolic execution of floating point programs
+          </span>
+          <div class="abstract">
+            <p>
+              Manually reasoning about programs using floating point can be
+              difficult. In this talk I'll walk through some examples of
+              seemingly correct code and show how a program analysis technique
+              called symbolic execution can be used to expose correctness
+              problems.
+            </p>
+          </div>
+        </div>
 
-  <blockquote>
-  <h4 style="margin-top:0px">The long road from ideas to bits and back: a traveller's guide to verifiable computational research</h4>
+        <div id="abraham" class="event">
+          <span class="author">Luke Abraham</span>
 
-  The translation of a scientific question into bit patterns in a
-  computer's memory involves many steps, as does the back-translation
-  of the results of a computation into scientific insight. Each step
-  is a potential source of mistakes, and thus requires some form of
-  verification before we can trust its correctness. In this talk, I
-  will outline appropriate verification approaches for each step,
-  which range from purely human efforts, in particular the critical
-  inspection of formulas and program source code, to fully mechanical
-  procedures such as type or unit checking. I will also adopt a
-  long-term perspective, focussing on the tools, procedures, and
-  teaching curricula that we ought to develop in order to establish a
-  trustworthy verification chain for computational science, even if
-  they require a change of habits compared to today's state of the
-  art. In particular, I will argue for the necessity to develop
-  digital scientific notations as the main human-computer interface of
-  computer-aided research.<br />
-  
-In the course of this discussion, I will also try to shed some light
-  on a few long-standing mysteries in computational science: Why is
-  testing floating-point code so difficult? Why is it so hard to make
-  scientific computations reproducible?  Why is there less use of
-  static type checking in science, despite it being considered
-  evidently beneficial in computer science?  Why do we trust
-  computations uncritically, even though we witness the unreliability
-of computing technology in daily life?
-</blockquote>
-</p>
-  
-  <p>
-  <h3>Attending and contributing</h3>
+          <span class="title">
+            How to do virtually everything with the Met Office Unified Model
+          </span>
+          <div class="abstract">
+            <p>
+              The Met Office Unified Model (MetUM) is a state of the art
+              general circulation model that has many different scientific
+              settings. Ensuring that the code is well tested is essential, as
+              it is used operationally worldwide, e.g. for weather &amp;
+              air-quality forecasts.
+            </p>
 
-  We have a set of speakers and the program will be posted shortly. If you would like to attend, <b>please register
-  via <a
-  href="https://docs.google.com/forms/d/e/1FAIpQLSc9xdKid9NtrqIkU-okLARMQ-9TY-x2imhEGxwTdEbCgH1l3g/viewform">the
-  registration form</a></b>.
-  <br /><br />
-  Registration is free. We plan to go for dinner afterward, though it
-  is not yet clear whether this can be provided for free.
-  <br /><br />
-  We invite proposals for talks of 20 minutes on topics relevant
-  to the theme of the workshop. Please register your interest in
-  giving a talk with the <a
-  href="https://docs.google.com/forms/d/e/1FAIpQLSc9xdKid9NtrqIkU-okLARMQ-9TY-x2imhEGxwTdEbCgH1l3g/viewform">registration
-  form</a>. Depending
-on the number of submitted talks we may select a subset based
-  on relevance and to gain a broad perspective. We also solicit
-  lightning talks (5 minutes) on practice/experience of testing
-  and verification in science. You may propose both a 20 minute talk
-  and lightning talk.
-  </p>
-  
-<!--
-<p>
-<h3>Talks</h3>
+            <p>
+              With over 900,000 lines of code and over 200 active developers
+              on four continents, a comprehensive test harness is in place at
+              the Met Office and partner sites to aid in development. However,
+              what is available for UK academics and their groups, who wish to
+              contribute to MetUM development, but do not have access to these
+              resources?
+            </p>
 
-We also invite proposals for talks of between 20 and 30 minutes
-on topics relevant to the theme of the workshop. Please submit
-a talk abstract (up to 500 words) to <a
-href="mailto:dominic.orchard@cl.cam.ac.uk">dominic.orchard@cl.cam.ac.uk</a>. Depending
-on the number of submitted talks we may have to select a subset based
-on relevance and to gain a broad perspective. Please submit talk abstracts
-by <span class="important">February 29th</span> at the latest.
-</p>
--->
+            <p>
+              This talk will discuss the recent developments made by the Met
+              Office in running the MetUM in a virtual machine environment. I
+              will cover using this environment for testing and training, and
+              will give examples of the problems encountered, along with some
+              solutions.
+            </p>
+          </div>
+        </div>
 
-<p>
-<h3>Logistics</h3>
+        <div id="abate" class="event">
+          <span class="author">Alessandro Abate</span>
 
-The <a href="http://www.cl.cam.ac.uk">Computer Laboratory</a> is
-situated on the west side of Cambridge (<a
-href="https://www.google.co.uk/maps/place/University+of+Cambridge+Computer+Laboratory/@52.2108943,0.089538,17z/data=!3m1!4b1!4m2!3m1!1s0x47d8774a3f6e55cd:0xabf8227343e684c7?hl=en"><b>map</b></a>)
-and is most easily accessed from the Cambridge train station by taking
-a taxi or the Uni 4 bus. Cambridge is easily accessible by train from London King Cross.
-Please contact us if you have any questions. <br /><br />
+          <span class="title">
+            Sound and Automated Synthesis of Digital Controllers for Continuous Plants
+          </span>
+          <div class="abstract">
+            <p>
+              Modern control is implemented with digital microcontrollers,
+              embedded within a dynamical plant that represents physical
+              components. I present a new algorithm based on counter-example
+              guided inductive synthesis that automates the design of digital
+              controllers that are correct by construction.  The synthesis
+              result is sound with respect to the complete range of
+              approximations, including time discretization, quantization
+              effects, and finite-precision arithmetic and its rounding
+              errors. The new algorithm is implemented in a toolbox and
+              tested.
+            </p>
+          </div>
+        </div>
 
-<!--
-The meeting will be held in <a
-href="http://www.cl.cam.ac.uk/research/dtg/openroommap/static/?s=FW26&labels=1"><b>room
-FW26</b> (click for map)</a> which is on the first floor to the right
-of the stairs on the west side of the building. We
-will post signage on the day, but you can enter at reception and ask
-to be directed. <br /><br />
--->
+        <div id="kostiou" class="event">
+          <span class="author">Vicky Kostiou</span>
 
-For those looking for lunch first, there is a cafe directly below the
-meeting room, as well as <a href="https://www.cl.cam.ac.uk/misc/localarea/catering.html">other options on the West
-Cambridge campus</a>.<br /><br />
+          <span class="title">
+            Pathological behaviours of single progenitor model defy inference techniques
+          </span>
+          <div class="abstract">
+            <p>
+              The development of cancer is a multistep process, driven the
+              sequential acquisition of genomic alterations that transform
+              cellular phenotype. The quantification of the effects of genetic
+              and epigenetic on cellular dynamics is essential to understand
+              the early stages in cancer evolution.  A simple stochastic model
+              captures the behaviour of stem cells in squamous epithelia in
+              lineage tracing experiments. Here we discuss fundamental
+              limitations of experimental analysis using this model arising
+              from intrinsic properties of the model, and their implications
+              for future studies of transformed stem cells.
+            </p>
+          </div>
+        </div>
 
-</p>
+        <div id="miah" class="event">
+          <span class="author">Wadud Miah</span>
 
-<hr>
-<address></address>
-<!-- hhmts start -->Last modified: 2017-02-01 17:18:00 UTC
-  <!--hhmts end -->
-  </div>
-</body> </html>
+          <span class="title">
+            Verification of Fortran Codes
+          </span>
+          <div class="abstract">
+            <p>
+              Fortran is a popular language for computational science codes
+              which typically run on large supercomputers. With the advent of
+              large Petascale machines, there is a strong emphasis on parallel
+              scalability and energy efficiency. However, knowledge of
+              verification of Fortran codes is lacking and there is anecdotal
+              evidence to suggest that there is an over-reliance compilers to
+              verify codes. This presentation will introduce a simple
+              verification workflow and present the NAG compiler and
+              verification tools for Fortran codes.
+            </p>
+          </div>
+        </div>
+
+        <div id="contrastin" class="event">
+          <span class="author">Mistral Contrastin</span>
+
+          <span class="title">
+            Verifying spatial properties of stencil computations
+          </span>
+
+          <div class="abstract">
+            <p>
+              Stencil computation is a ubiquitous programming idiom in
+              scientific computing. It involves iterated assignments to an
+              array from some combination of the values in the neighbourhood
+              of the current indices of an iteration e.g. a[i][j] = a[i][j+1]
+              + a[i][j-1] in a nested loop with i and j as induction
+              variables. These are heavily used in scientific simulations as
+              well as image processing algorithms.
+            </p>
+
+            <p>
+              The indexing behaviour may easily involve more than 10 terms
+              indexing in two or three dimensions. This opens room for errors
+              in offsets. We hypothesised that vast majority of stencil
+              computations involve continuous and symmetrical offsets from
+              induction variables. We present a succinct specification
+              language that allows verifying such spatial properties.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr/>
+
+    <p>
+      The meeting is part of the EPSRC project <a
+      href="http://gow.epsrc.ac.uk/NGBOViewGrant.aspx?GrantRef=EP/M026124/1"><i>CamFort:
+      Automated evolution and verification of computational science
+      models</i></a> at the Computer Laboratory.
+    </p>
+
+<!-- hhmts start -->Last modified: 2017-03-07 13:46:00 UTC<!--hhmts end -->
+</body>
+</html>
