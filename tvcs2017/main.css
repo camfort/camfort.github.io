@@ -250,3 +250,10 @@ color:#b00;
 div.headinfo {
 margin-bottom: 1em
 }
+
+#schedule {
+ padding: 1em; 
+}
+#schedule.time {
+ width: 10ex; 
+}
