@@ -254,6 +254,9 @@ margin-bottom: 1em
 #schedule {
  padding: 1em; 
 }
-#schedule.time {
- width: 10ex; 
+#schedule td {
+  padding: 0.5em;
+}
+#schedule .time {
+ width: 20ex; 
 }
