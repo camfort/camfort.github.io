@@ -183,6 +183,10 @@ tr h4, td h4 {
     margin-right: 18px;
 }
 
+tr {
+ border-bottom: solid 1px #ccc; 
+}
+
 table {
     width:100%;
 }
