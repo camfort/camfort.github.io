@@ -1,0 +1,99 @@
+a {
+   color: #3e86a8;
+}
+
+
+a:hover {
+    color: #dfae70;
+}
+
+body {
+    padding: 10vw;
+    padding-top: 2vw;
+    margin: 0px;
+}
+
+#main {
+    width: 50vw;
+    padding: 0;
+    float:left;
+}
+
+#header {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans;
+}
+
+#side {
+    margin: 0;
+    margin-left: 5vw;
+    padding: 0;
+    padding-left: 5vw;
+    width: calc(20vw - 2px);
+    float:left;
+    border-left: 1px solid #ccc;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans;
+    font-size: 12pt;
+    font-weight: 400;
+}
+
+.title-big, .title-small {
+    color: #777;
+    font-weight: 300;
+}
+
+section {
+    font-family: 'Rasa', serif;
+    font-size: 15pt;
+}
+
+#side section {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13pt;
+    font-weight: 300;
+}
+
+.title-big {
+    font-size: 24pt;
+}
+
+
+.title-medium {
+    font-weight: 600;
+    font-size: 18pt;
+    color: #dfae70;
+}
+
+.title-small {
+    font-weight: 500;
+    font-size:19pt;
+    color: #3e86a8
+}
+
+.code {
+    background: #eee;
+    color: #444;
+    width: 45vw;
+    padding:5px;
+    margin-left:40px;
+    font-size:11pt;
+}
+
+pre {
+    padding:0px;
+}
+
+.code .comment {
+    color: #090;
+}
+
+.code .type {
+    color: #a00;
+}
+
+.code .keyw {
+    color: #a00;
+}
+
+.code .var {
+    color: #444;
+}
