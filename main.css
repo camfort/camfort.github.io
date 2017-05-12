@@ -8,13 +8,14 @@ a:hover {
 }
 
 body {
-    padding: 10vw;
+    padding: 5vw;
+    padding-left: 10vw;
     padding-top: 2vw;
     margin: 0px;
 }
 
 #main {
-    width: 50vw;
+    width: 55vw;
     padding: 0;
     float:left;
 }
@@ -27,7 +28,7 @@ body {
     margin: 0;
     margin-left: 5vw;
     padding: 0;
-    padding-left: 5vw;
+    padding-left: 3vw;
     width: calc(20vw - 2px);
     float:left;
     border-left: 1px solid #ccc;
@@ -56,6 +57,11 @@ section {
     font-size: 24pt;
 }
 
+.title-medium-alt {
+    font-weight: 600;
+    font-size: 18pt;
+    color: #cf8e70;
+}
 
 .title-medium {
     font-weight: 600;
@@ -67,6 +73,12 @@ section {
     font-weight: 500;
     font-size:19pt;
     color: #3e86a8
+}
+
+.title-small-alt {
+    font-weight: 500;
+    font-size:19pt;
+    color: #2e6678
 }
 
 .code {
