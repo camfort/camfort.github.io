@@ -37,8 +37,8 @@ body {
 }
 
 #logos {
-    padding: 0;
-    margin: 0;
+    padding: -1px;
+    margin: -1px;
     float: right;
     clear: right;
     margin-top: -30px;
@@ -134,4 +134,17 @@ pre {
 
 #side section {
     padding-bottom: 23pt;
+}
+
+.logo {
+    display:inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.logos {
+    padding-top: -2px;
+    margin-top: -2px;
+    padding-bottom: -4px;
+    margin-bottom: -6px;
 }
