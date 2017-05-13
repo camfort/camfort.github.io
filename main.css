@@ -1,5 +1,5 @@
 a {
-   color: #3e86a8;
+   color: #2e6678;
 }
 
 
@@ -9,28 +9,49 @@ a:hover {
 
 body {
     padding: 5vw;
-    padding-left: 10vw;
+    padding-left: 7vw;
     padding-top: 2vw;
     margin: 0px;
 }
 
 #main {
-    width: 55vw;
+    width: 58vw;
     padding: 0;
     float:left;
 }
 
+#headcontainer {
+    padding: 0;
+    margin: 0;
+    clear:both;
+    height: calc(92px)
+}
+
 #header {
+    padding: 0;
+    margin: 0;
     margin-top: 3vw;
+    min-width: 312px;
+    width: 58vw;
     font-family: "Helvetica Neue", Helvetica, Arial, sans;
+}
+
+#logos {
+    padding: 0;
+    margin: 0;
+    float: right;
+    clear: right;
+    margin-top: -30px;
 }
 
 #side {
     margin: 0;
-    margin-left: 5vw;
+    margin-left: 2vw;
+    margin-top: 3vw;
     padding: 0;
     padding-left: 3vw;
     width: calc(20vw - 2px);
+    min-width: 270px;
     float:left;
     border-left: 1px solid #ccc;
     font-family: "Helvetica Neue", Helvetica, Arial, sans;
@@ -72,14 +93,14 @@ section {
 
 .title-small {
     font-weight: 500;
-    font-size:19pt;
-    color: #3e86a8
+    font-size:17pt;
+    color: #3e86a8;
 }
 
 .title-small-alt {
     font-weight: 500;
-    font-size:19pt;
-    color: #2e6678
+    font-size:17pt;
+    color: #2e6678;
 }
 
 .code {
@@ -109,4 +130,8 @@ pre {
 
 .code .var {
     color: #444;
+}
+
+#side section {
+    padding-bottom: 23pt;
 }
