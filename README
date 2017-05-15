@@ -1,0 +1,8 @@
+template.html provides the header/side bar.
+
+Build the static pages via: make
+
+Content:
+  index-inner.html - home
+  team-inner.html  - team
+  publications-inner.html - publications
