@@ -50,7 +50,7 @@ body {
     margin-top: 3vw;
     padding: 0;
     padding-left: 3vw;
-    width: calc(25vw - 2px);
+    width: calc(23vw - 2px);
     float:left;
     border-left: 1px solid #ccc;
     font-family: "Helvetica Neue", Helvetica, Arial, sans;
