@@ -28,7 +28,7 @@ rel="stylesheet" />
 <div id="main">
   <section>
   <div id="header">
-    <a href="index.html"><img src="camfort.png" /></a><br />
+    <img src="camfort.png" /><br />
     <span class="title-big">
       Specify, verify, and refactor Fortran code
     </span>
@@ -44,25 +44,10 @@ rel="stylesheet" />
   FORTRAN 77, and Fortran 90 language standards. Support for Fotran
   95, 2003, and 2008 is in progress.
   </p>
-</section>
-
- <section><span class="title-medium">News / dates</span>
-  <p>
-  <ul id="news">
-  <li><b>24-26th July 2017</b> - We are talking about CamFort at the
-  <a
-  href="http://www.nag.co.uk/content/fortran-modernization-workshop/barcelona-july-2017">Fortran
-  modernization workshop</a>
-  at Universitat Politechnica de Catalunya, Barcelona, Spain.
-  (<a
-  href="http://www.nag.co.uk/content/fortran-modernization-workshop/barcelona-july-2017">details</a>).
-  </li>
-  </ul>
-  </p>
   </section>
 
-  <section> <span class="title-medium">Features</span><br />
-  <span class="title-medium-alt">Specification & verification</span>
+  <section> <span class="title-medium">Specification &
+  Verification</span><br />
   <p>
   CamFort provides <em>lightweight verification</em> features. 
   Source-code annotations (comments) provide specifications of certain
@@ -73,11 +58,8 @@ rel="stylesheet" />
   <p>
   Our current specification and verification features provide:
   <ul>
-    <li><b>Units-of-measure typing</b> allows you to annotate Fortran
-  source code with units of variables and can automatically check
-  whether units are consistently used and report back where it went
-    wrong if they are inconsistent.
-    Example: <br />
+    <li><b>Units-of-measure typing</b></li>
+    Example:
     <div class="code">
       <pre>
   <span class='comment'>!= unit(m) :: d1, d2</span>
@@ -85,10 +67,8 @@ rel="stylesheet" />
   <span class='type'>real</span> :: <span class='var'>d1</span>, <span class='var'>d2</span>, <span class='var'>t</span>, <span class='var'>v</span>
   <span class='var'>v</span> = (<span class='var'>d1</span> + <span class='var'>d2</span>)/<span class='var'>t</span>
 </pre>
-    </div></li>
-    <li><b>Array access shape</b>  allows you to describe and verify
-  the access patterns your code makes over arrays in order to catch
-  array indexing errors. Example: <br />
+    </div>
+    <li><b>Array access shape</b></li>
     <div class="code">
           <pre>
   <span class='keyw'>do</span> <span class='var'>i</span> = 1, <span class='var'>n</span>
@@ -102,13 +82,12 @@ rel="stylesheet" />
     <span class='keyw'>end do</span>
   <span class='keyw'>end do</span>
 </pre>
-    </div>
-    </li>
+</div>
   </ul>
   </p>
   </section>
   
-  <section> <span class="title-medium-alt">Refactoring</span><br />
+  <section> <span class="title-medium">Refactoring</span><br />
   <p>
   Many language features of older Fortran standards (pre Fortran 90) are
   known to be a ready source of programming error. CamFort provides
@@ -122,7 +101,7 @@ rel="stylesheet" />
   </section>
   
   <section>
-  <span class="title-medium">Long-term
+  <span class="title-medium-alt">Long-term
   vision</span><br />
   <p>
 
@@ -167,7 +146,7 @@ rel="stylesheet" />
   <div id="side">
     <a class="twitter-follow-button" href="https://twitter.com/camfort_tool"
   data-show-count="false" data-size="large">
-    Follow @camfort_tool</a><br /><br /><br />
+    Follow @camfort_tool</a><br /><br />
     <section>
     <span class="title-small">Download</span><br />
     The source code for CamFort is hosted on
@@ -190,8 +169,6 @@ rel="stylesheet" />
     <b><a href="publications.html">publications</a></b>.
     </section>
 
-  
-    
     <section>
     <span class="title-small">Mailing list</span><br />
     For help and announcments you can sign-up to our
@@ -203,7 +180,7 @@ rel="stylesheet" />
     An introduction to CamFort and training material is provided
     as part of the <a
     href="http://www.nag.co.uk/content/fortran-modernization-workshop">Fortran
-    Modernization Workshops</a> run by the Numerical Algorithms Group (<em>nag</em>) in the UK and
+    Modernization Workshops</a> run by <b>nag</b> in the UK and
     Europe.<br /><br />
     We host an annual event on <em>Testing and Verification in
     Computational Science</em>. Previous versions occured in

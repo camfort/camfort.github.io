@@ -50,8 +50,7 @@ body {
     margin-top: 3vw;
     padding: 0;
     padding-left: 3vw;
-    width: calc(20vw - 2px);
-    min-width: 270px;
+    width: calc(25vw - 2px);
     float:left;
     border-left: 1px solid #ccc;
     font-family: "Helvetica Neue", Helvetica, Arial, sans;
@@ -81,7 +80,7 @@ section {
 
 .title-medium-alt {
     font-weight: 600;
-    font-size: 18pt;
+    font-size: 16pt;
     color: #cf8e70;
 }
 
@@ -106,15 +105,18 @@ section {
 .code {
     background: #eee;
     color: #444;
-    width: 45vw;
-    padding:5px;
-    margin-left:40px;
-    font-size:11pt;
+    width: 50vw;
+    padding:2px;
+    margin: 10pt;
+
+    font-size:9.5pt;
+    overflow:scroll;
 }
 
 pre {
     padding:0px;
 }
+
 
 .code .comment {
     color: #090;
@@ -147,4 +149,17 @@ pre {
     margin-top: -2px;
     padding-bottom: -4px;
     margin-bottom: -6px;
+}
+
+#pubs th {
+    margin-left:0;
+    padding-left:0;
+    width: 70px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+#pubs td {
+    padding: 10pt;
+    font-size: 13pt;
 }
