@@ -163,3 +163,9 @@ pre {
     padding: 10pt;
     font-size: 13pt;
 }
+
+.menu_button {
+    color: #cf8e70;
+    font-weight: 500;
+    font-size:17pt;
+}
