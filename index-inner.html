@@ -58,9 +58,9 @@
   <span class='keyw'>do</span> <span class='var'>i</span> = 1, <span class='var'>n</span>
     <span class='keyw'>do</span> <span class='var'>j</span> = 1, <span
   class='var'>m</span>
-      <span class='comment'>!= stencil forward(dim=1,depth=1) * centered(dim=2,depth=1) :: a</span>
       <span class='var'>x</span> = <span class='var'>a</span>(<span class='var'>i</span>, <span class='var'>j</span>-1) + <span class='var'>a</span>(<span class='var'>i</span>, <span class='var'>j</span>+1) + <span class='var'>a</span>(<span class='var'>i</span>, <span class='var'>j</span>)
       <span class='var'>y</span> = <span class='var'>a</span>(<span class='var'>i</span>+1, <span class='var'>j</span>-1) + <span class='var'>a</span>(<span class='var'>i</span>+1, <span class='var'>j</span>+1) + <span class='var'>a</span>(<span class='var'>i</span>+1, <span class='var'>j</span>)
+      <span class='comment'>!= stencil forward(dim=1,depth=1) * centered(dim=2,depth=1) :: a</span>
       <span class='var'>b</span>(<span class='var'>i</span>, <span
   class='var'>j</span>) = <span class='var'>x</span> + <span class='var'>y</span>
     <span class='keyw'>end do</span>
