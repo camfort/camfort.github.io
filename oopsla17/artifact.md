@@ -26,49 +26,15 @@ The artifact is provided as a VirtualBox appliance. We tested it using VirtualBo
 
 6. Make sure you can run the camfort tool. For example, try
 
-camfort stencils-infer camfort/samples/stencils/decomposed-three-point.f90 
+     camfort stencils-infer camfort/samples/stencils/decomposed-three-point.f90 
 
 Which should returning the following output, informed the user of the inferred specificaitons for the code:
 
-Inferring stencil specs for 'camfort/samples/stencils/decomposed-three-point.f90'
+      Inferring stencil specs for 'camfort/samples/stencils/decomposed-three-point.f90'
 
-camfort/samples/stencils/decomposed-three-point.f90
+      camfort/samples/stencils/decomposed-three-point.f90
 
-(16:2)-(16:28)    stencil readOnce, (centered(depth=1, dim=1)) :: a
-
-## The software corpus
-
-Where possible we have included packages from our corpus in /home/camfort/corpus.
-
-Below is the complete list of packages that we used, their source, and a description of any modifications we made (if any).
-
-**Included**
-
-1. [GEOS-Chem](http://acmg.seas.harvard.edu/geos/), tropospheric chemistry model. The source code for this model is available at [https://bitbucket.org/gcst/geos-chem](https://bitbucket.org/gcst/geos-chem). We used the version at commit 3071d9b722d8d07a97c4a10189044ddb57d8f7ec.
-
-2. Navier, a small-size Navier-Stokes fluid model. Source code is available at [https://github.com/dorchard/navier](https://github.com/dorchard/navier). We used the version at commit 10f6f6e7b56a3d53c3f49145a6bc20e457ef6fc9.
-
-3. BLAS, a common linear-algebra library used in modelling available from [http://www.netlib.org/blas/](http://www.netlib.org/blas/). We used version 3.6.0.
-
-4. ARPACK-NG, an open-source library for solving large-scale eigenvalue problems available from [https://github.com/opencollab/arpack-ng](https://github.com/opencollab/arpack-ng).  We used the version at commit 0e2ed1b2f2f3636a8dbdba580006c9dbe536e717.  We patched this version to make it standards compliant. The patch used is in /home/camfort/patches/arpackng.patch. 
-
-5. SPECFEM3D, global seismic wave models, source code is available at [https://github.com/geodynamics/specfem3d](https://github.com/geodynamics/specfem3d). We used the version at commit 48c539b730dcdaa845bad930d5790e5cdbbba5c7 which we then patched for standards compliance with /home/camfort/patches/specfm3d.patch.
-
-6. Cliffs, a tsunami model, source code is available at [https://github.com/Delta-function/cliffs-src](https://github.com/Delta-function/cliffs-src).  We used the version at commit 137583958c37ce466b81ce2ec1611fbd64c16ac5. We converted the repository to comply to the Fortran 90 standard using the script /home/camfort/patches/cliffssrc.sh
-
-**Not included but can be downloaded**
-
-1. MUDPACK, a general multi-grid solver for elliptical partial differentials. Download from [https://www2.cisl.ucar.edu/resources/legacy/mudpack/download](https://www2.cisl.ucar.edu/resources/legacy/mudpack/download) 
-
-2. Computational Physics (CP), programs from a popular textbook "An Introduction to Computational Physics". The sample programs from the book are available here: [http://www.physics.unlv.edu/~pang/cp_f90.html](http://www.physics.unlv.edu/~pang/cp_f90.html) 
-
-**Not included, requires special license agreement**
-
-3. The [Unified Mode](http://www.metoffice.gov.uk/research/modelling-systems/unified-model)l (UM) developed by the UK Met Office for weather modelling. Source code is available through [https://code.metoffice.gov.uk/](https://code.metoffice.gov.uk/). Requires a strong license agreement. There is a contact address on that page with details of how to apply for access. 
-
-4. [E3ME](https://www.camecon.com/how/e3me-model/), a mixed economic/energy impact prediction model. This is a commercial model developed by [Cambridge Econometrics](https://www.camecon.com/). Send inquiries with a project proposal to the company to request a license for the source code.
-
-5. Hybrid4, a global scale ecosystem model. The development of this model is led by [Dr Andrew Friend](http://www.geog.cam.ac.uk/people/friend/) at the University of Cambridge. Inquiries (with a project proposal) should be directed to him.
+      (16:2)-(16:28)    stencil readOnce, (centered(depth=1, dim=1)) :: a
 
 # Step by step instructions
 
@@ -161,6 +127,41 @@ The examples in order are:
 ### Empirical study of array computations (Section 2 of the paper)
 
 The design of our specification language is based on an empirical study of array computations in Fortran code (see Section 2 of the paper). This is based on a separate static analysis tool that we built that use CamFort as a library.
+
+## The software corpus
+
+Where possible we have included packages from our corpus in `/home/camfort/corpus`.
+
+Below is the complete list of packages that we used, their source, and a description of any modifications we made (if any).
+
+**Included**
+
+1. [GEOS-Chem](http://acmg.seas.harvard.edu/geos/), tropospheric chemistry model. The source code for this model is available at [https://bitbucket.org/gcst/geos-chem](https://bitbucket.org/gcst/geos-chem). We used the version at commit 3071d9b722d8d07a97c4a10189044ddb57d8f7ec.
+
+2. Navier, a small-size Navier-Stokes fluid model. Source code is available at [https://github.com/dorchard/navier](https://github.com/dorchard/navier). We used the version at commit 10f6f6e7b56a3d53c3f49145a6bc20e457ef6fc9.
+
+3. BLAS, a common linear-algebra library used in modelling available from [http://www.netlib.org/blas/](http://www.netlib.org/blas/). We used version 3.6.0.
+
+4. ARPACK-NG, an open-source library for solving large-scale eigenvalue problems available from [https://github.com/opencollab/arpack-ng](https://github.com/opencollab/arpack-ng).  We used the version at commit 0e2ed1b2f2f3636a8dbdba580006c9dbe536e717.  We patched this version to make it standards compliant. The patch used is in `/home/camfort/patches/arpackng.patch`. 
+
+5. SPECFEM3D, global seismic wave models, source code is available at [https://github.com/geodynamics/specfem3d](https://github.com/geodynamics/specfem3d). We used the version at commit 48c539b730dcdaa845bad930d5790e5cdbbba5c7 which we then patched for standards compliance with `/home/camfort/patches/specfm3d.patch`.
+
+6. Cliffs, a tsunami model, source code is available at [https://github.com/Delta-function/cliffs-src](https://github.com/Delta-function/cliffs-src).  We used the version at commit 137583958c37ce466b81ce2ec1611fbd64c16ac5. We converted the repository to comply to the Fortran 90 standard using the script `/home/camfort/patches/cliffssrc.sh`
+
+**Not included but can be downloaded**
+
+1. MUDPACK, a general multi-grid solver for elliptical partial differentials. Download from [https://www2.cisl.ucar.edu/resources/legacy/mudpack/download](https://www2.cisl.ucar.edu/resources/legacy/mudpack/download) 
+
+2. Computational Physics (CP), programs from a popular textbook "An Introduction to Computational Physics". The sample programs from the book are available here: [http://www.physics.unlv.edu/~pang/cp_f90.html](http://www.physics.unlv.edu/~pang/cp_f90.html) 
+
+**Not included, requires special license agreement**
+
+3. The [Unified Mode](http://www.metoffice.gov.uk/research/modelling-systems/unified-model)l (UM) developed by the UK Met Office for weather modelling. Source code is available through [https://code.metoffice.gov.uk/](https://code.metoffice.gov.uk/). Requires a strong license agreement. There is a contact address on that page with details of how to apply for access. 
+
+4. [E3ME](https://www.camecon.com/how/e3me-model/), a mixed economic/energy impact prediction model. This is a commercial model developed by [Cambridge Econometrics](https://www.camecon.com/). Send inquiries with a project proposal to the company to request a license for the source code.
+
+5. Hybrid4, a global scale ecosystem model. The development of this model is led by [Dr Andrew Friend](http://www.geog.cam.ac.uk/people/friend/) at the University of Cambridge. Inquiries (with a project proposal) should be directed to him.
+
 
 #### Generating study data and analysing a single package
 
