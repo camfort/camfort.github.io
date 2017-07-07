@@ -1,4 +1,4 @@
-Verifying Spatial Properties of Array Computations - Artifact guide
+# Verifying Spatial Properties of Array Computations - Artifact guide
 
 This artifact contains the code necessary to reproduce our study of array programming idioms in scientific/numerical Fortran code (Section 2 of the paper), to test the examples of the stencil specification language and inference (Section 3 of the paper), and to reproduce the statistics describing the various kinds of stencils found (Section 7 of the paper).
 
@@ -7,9 +7,7 @@ In Section 2.1 of the paper we list the software packages that we included in ou
 Note, that all of our tools are open-source and can be found at:
 
 * [https://github.com/camfort/camfort](https://github.com/camfort/camfort) - the verification tool
-
 * [https://github.com/camfort/array-analyse](https://github.com/camfort/array-analyse) - static analysis tool used for Section 2
-
 * [https://github.com/camfort/camfort-analyse](https://github.com/camfort/camfort-analyse) evaluation scripts used in Section 7
 
 # Getting started
