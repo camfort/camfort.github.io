@@ -58,7 +58,7 @@ The example for the one-dimensional discrete Laplace transform was given in Sect
 
 5. We can also use CamFort to update the source file itself with the new specification: `camfort stencils-synth laplace.f90 --inplace`
 
-6. You can see the change by running `less laplace.f90` again.
+6. You can see the added specification (which appears within the `do` block, on line 14) by running `less laplace.f90` again.
 
 7. Now that the array computation has a specification we can use CamFort to check the code against it: `camfort stencils-check laplace.f90`
 
@@ -92,7 +92,7 @@ The example in Section 1 of the paper gives the computation to compute `du2dx` f
 
 (Note that the trailing 'dot' is significant: this indicates to CamFort that it should process all the files in the current directory.)
 
-The contents of `simulation_mod.f90` should now have been updated to contain the stencil specifications (lines 35 and 36). These specifications are attached to the computation of `f(i,j)` (which is the array assignment) and refer to the variables `u` and `v` which flow into the assignment through `du2dx`, `duvdy` etc. 
+The contents of `simulation_mod.f90` should now have been updated to contain various stencil specifications (including two on lines 35 and 36)-- view this with `less simulation_mod.f90` or `gedit simulation_mod.f90`. These specifications are attached to the computation of `f(i,j)` (which is the array assignment) and refer to the variables `u` and `v` which flow into the assignment through `du2dx`, `duvdy` etc. 
 
 ### Small synthesis examples
 
@@ -106,19 +106,19 @@ Or to synthesis an inferred specification inplace
 
 The examples in order are:
 
-1. `decomposed-three-part.f90` (Section 2.1 of the paper) shows how CamFort will track data flow in order to derive the correct specification for an array update.
+1. `decomposed-three-part.f90` (Section 2.1 of the paper) shows how CamFort will track data flow in order to derive the correct specification for an array update. Try `camfort stencils-infer decomposed-three-part.f90` to see the inferred specification.
 
-2. `single-region.f90` (Section 3 of the paper) demonstrates five single region stencils (i.e. specifications do not use the region combination operators + and *). Note that the inferred specifications here get an extra qualifier `readOnly` which was not explained at the point in the paper where this example first appears (for the purpose of introducing the language incrementally).
+2. `single-region.f90` (Section 3 of the paper) demonstrates five single region stencils (i.e. specifications do not use the region combination operators + and *). Note that the inferred specifications here get an extra qualifier `readOnly` which was not explained at the point in the paper where this example first appears (for the purpose of introducing the language incrementally). Try `camfort stencils-infer` or `camfort stencils-synth --inplace` on this file.
 
 3. `combined-region.f90` (Section 3 of the paper) shows a nine-point stencil specification using the intersection operator `*` and a five-point stencil specification built using the union operator `+`.
 
 4. `region-declaration.f90` (Section 3 of the paper) shows a declaration for the Roberts Cross stencil pattern which can be reused within a program for clarity. Try using `camfort stencils-check` to validate the code against the specification already given in this file.
 
-5. `approx.f90` (Section 3 of the paper) cannot be specified exactly with the specification language and so CamFort will infer a pair of `atLeast` and an `atMost` specifications to bound its behaviour.
+5. `approx.f90` (Section 3 of the paper) cannot be specified exactly with the specification language and so `camfort stencils-infer` will infer a pair of `atLeast` and an `atMost` specifications to bound its behaviour.
 
-6. `relativisation.f90` (Section 3 of the paper) contains an array update to a subscript with a non-zero offset (i.e. the update is at `i+1` rather than `i`). CamFort is able to generate a stencil specification relative to this offset (try `camfort stencils-infer samples/stencils/relativisation.f90`).
+6. `relativisation.f90` (Section 3 of the paper) contains an array update to a subscript with a non-zero offset (i.e. the update is at `i+1` rather than `i`). CamFort is able to generate a stencil specification that is 'relativised' to this left-hand side offset (try `camfort stencils-infer samples/stencils/relativisation.f90`).
 
-7. `access.f90` (Section 3 of the paper) does not contain a stencil computation. Instead, it contains an array computation of the maximum element in an array. CamFort therefore will generate an `access` specification for this, distinguishing the programming pattern from a stencil computation.
+7. `access.f90` (Section 3 of the paper) does not contain a stencil computation. Instead, it contains an array computation of the maximum element in an array. CamFort therefore will infer/synth an `access` specification for this, distinguishing the programming pattern from a stencil computation.
 
 ## Empirical study of array computations (Section 2 of the paper)
 
@@ -144,18 +144,19 @@ Where possible we have included packages from our corpus in `/home/camfort/corpu
 
 **Not included but can be downloaded**
 
-1. MUDPACK, a general multi-grid solver for elliptical partial differentials. Download from [https://www2.cisl.ucar.edu/resources/legacy/mudpack/download](https://www2.cisl.ucar.edu/resources/legacy/mudpack/download) 
+7. MUDPACK, a general multi-grid solver for elliptical partial differentials. Download from [https://www2.cisl.ucar.edu/resources/legacy/mudpack/download](https://www2.cisl.ucar.edu/resources/legacy/mudpack/download) 
 
-2. Computational Physics (CP), programs from a popular textbook "An Introduction to Computational Physics". The sample programs from the book are available here: [http://www.physics.unlv.edu/~pang/cp_f90.html](http://www.physics.unlv.edu/~pang/cp_f90.html) 
+8. Computational Physics (CP), programs from a popular textbook "An Introduction to Computational Physics". The sample programs from the book are available here: [http://www.physics.unlv.edu/~pang/cp_f90.html](http://www.physics.unlv.edu/~pang/cp_f90.html) 
 
 **Not included, requires special license agreement**
 
-3. The [Unified Model](http://www.metoffice.gov.uk/research/modelling-systems/unified-model)l (UM) developed by the UK Met Office for weather modelling. Source code is available through [https://code.metoffice.gov.uk/](https://code.metoffice.gov.uk/). Requires a strong license agreement. There is a contact address on that page with details of how to apply for access. 
+9. The [Unified Model](http://www.metoffice.gov.uk/research/modelling-systems/unified-model)l (UM) developed by the UK Met Office for weather modelling. Source code is available through [https://code.metoffice.gov.uk/](https://code.metoffice.gov.uk/). Requires a strong license agreement. There is a contact address on that page with details of how to apply for access. 
 
-4. [E3ME](https://www.camecon.com/how/e3me-model/), a mixed economic/energy impact prediction model. This is a commercial model developed by [Cambridge Econometrics](https://www.camecon.com/). Send inquiries with a project proposal to the company to request a license for the source code.
+10. [E3ME](https://www.camecon.com/how/e3me-model/), a mixed economic/energy impact prediction model. This is a commercial model developed by [Cambridge Econometrics](https://www.camecon.com/). Send inquiries with a project proposal to the company to request a license for the source code.
 
-5. Hybrid4, a global scale ecosystem model. The development of this model is led by [Dr Andrew Friend](http://www.geog.cam.ac.uk/people/friend/) at the University of Cambridge. Inquiries (with a project proposal) should be directed to him.
+11. Hybrid4, a global scale ecosystem model. The development of this model is led by [Dr Andrew Friend](http://www.geog.cam.ac.uk/people/friend/) at the University of Cambridge. Inquiries (with a project proposal) should be directed to him.
 
+We are in active collaboration with the developers of these packages.
 
 ### Generating study data and analysing a single package
 
@@ -165,15 +166,19 @@ Where possible we have included packages from our corpus in `/home/camfort/corpu
 
        array-analysis navier 
 
-3. This generate a summary of the results and a data file `navier.restart`. The summary data can be reviewed at any time by running:
+(you may notice warnings `NON-HANDLED-RANGE`, these are just debug messages from inside our analysis tool).
+
+3. This generate a summary of the results and a data file `navier.restart`. Summary data can be reviewed at any time using `array-analysis VIEW rfile` where there is a file `rfile.restart`. In this case, try running:
 
        array-analysis VIEW navier
 
-4. The raw data can be analysed/categorised to generate data matching the format of the different data analyses in Section 2.2 by using the `study` program:
+4. This raw data file can be analysed/categorised to generate data matching the format of the different data analyses in Section 2.2 of our paper by using the `study` program:
 
        study navier.restart
     
-This generates tables of data matching the categorisations used in Section 2.2. 
+This generates tables of data matching the categorisations used in Section 2.2.
+
+*Note that `study` takes file name arguments with `.restart` endings; whilst `array-analysis` should not have ` .restart` in the file names. Apologies for this quirk. If you do `array-analysis VIEW navier.restart` then you will get a blank data set as the tool will try to read `navier.restart.restart` which does not exist.*
 
 ### Generating study data and analysing the provided corpus
 
@@ -186,11 +191,13 @@ Note that the results of the paper are based on the aggregated data of all 11 pa
        array-analysis-per-directory.sh 
        study combined.restart
 
-Or perform the analyses of each corpus package in parallel with
+This could take time, e.g. ~2 hours on a standard desktop/laptop with 2.7Ghz Core i5, 8Gb RAM.
+
+(Note: there are some files with non-standard code in the corpus which are not parsed/lexed by our tool. Don't be alarmed by parsing/lexeing errors appearing during such a run. The analysis tool will skip these.)
+
+ Alternatively you can perform the analyses of each corpus package in parallel with
 
        array-analysis-per-directory.sh par
-
-Note, this could take some time, e.g. 2 hours on a standard Mac Book Pro (2.7Ghz Core i5, 8Gb RAM).
 
 ## Evaluating CamFort (Section 7 of the paper)
 
