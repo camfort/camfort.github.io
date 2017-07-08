@@ -49,11 +49,10 @@ The example for the one-dimensional discrete Laplace transform was given in Sect
 
 3. Use CamFort to infer the stencil specification: `camfort stencils-infer laplace.f90`
 
-    Inferring stencil specs for 'laplace.f90'
+      Inferring stencil specs for 'laplace.f90'
 
-    laplace.f90
-
-    (14:2)-(14:32)    stencil readOnce, (centered(depth=1, dim=1)) :: a
+      laplace.f90
+      (14:2)-(14:32)    stencil readOnce, (centered(depth=1, dim=1)) :: a
 
 4. From the output we see that on line 14, CamFort has determined that the array variable `a` is read with a centered spatial pattern of depth 1.
 
