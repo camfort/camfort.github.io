@@ -207,7 +207,7 @@ In Section 7 of the paper we summarize the various kinds of specifications found
 
 1. Change to the directory: `/home/camfort/camfort-analyse`
 
-2. Start a run (expected run-time ~1-2 hours) by typing: `specification-analysis.sh`
+2. Start a run (expected run-time ~1-2 hours) by typing: `specification-analysis.sh` (or by `./eval/infer.sh`)
 
     1. You can edit the list of files by opening the file `/home/camfort/camfort-analyse/eval/files.sh` and editing the DIRS environment variable.
 
@@ -227,11 +227,11 @@ The full list of relevant keys is as follows:
 
 * **dimsN** is the number of specifications with N dim= terms in them.
 
-* **emptySpec** is the number of potential stencils which had no specification.
+* **emptySpec** is the number of potential array computations which had no specification.
 
-* **inconsistentIV** is the number of potential stencils which used inductive variables inconsistently.
+* **inconsistentIV** is the number of potential array computations which used induction variables inconsistently.
 
-* **justPointed** is the number of specifications which were pointed only.
+* **justPointed** is the number of specifications which were `pointed` only.
 
 * **lexFailed** is the number of files that failed in the lexer.
 
@@ -251,11 +251,11 @@ The full list of relevant keys is as follows:
 
 * **multiActionRegionOpsN** is the number of multiAction specifications with N region operations (of either kind).
 
-* **nonNeighbour** is the number of specifications where indices were not neighbours.
+* **nonNeighbour** is the number of specifications inferred for array computations involving non neighbour indices.
 
 * **numStencilLines** is the number of lines generated with specifications.
 
-* **numStencilSpecs** is the number of variables given stencil specifications.
+* **numStencilSpecs** is the number of array variables given stencil specifications.
 
 * **parseFailed** is the number of files that failed to parse.
 
@@ -271,11 +271,11 @@ The full list of relevant keys is as follows:
 
 * **tickAssign** is the number of potential sites for stencil specifications.
 
-* **tickAssignSuccess** is the number of potential sites that were successfully inferred as stencil specifications.
+* **tickAssignSuccess** is the number of potential sites which successfully had a specification inferred.
 
-* **LHSnotHandled** is the number of specifications for which Camfort cannot handle the LHS.
+* **LHSnotHandled** is the number of specifications for which CamFort cannot handle the LHS.
 
-* **relativized** is the number of specifications where offsets had to be shifted in order to infer them correctly.
+* **relativized** is the number of specifications where offsets had to be shifted in order to infer them correctly (relativisation)
 
 In the paper we report the following quantities all of which are defined by a particular key in the summary:
 
@@ -287,7 +287,7 @@ In the paper we report the following quantities all of which are defined by a pa
 
 4. **Single-action with a non-pointed modifier**: singleActionIrr
 
-5. **Multi-action specifications** (at least 2 forward, backward or centered regions combined with any number of pointed regions) multiAction
+5. **Multi-action specifications** (at least 2 forward, backward or centered regions combined with any number of pointed regions- these represent interesting, more complex spatial patterns in code) multiAction
 
 6. **Multi-action only using intersection (*):** multiActionMulOnly
 
@@ -301,8 +301,8 @@ In the paper we report the following quantities all of which are defined by a pa
 
 11. **readOnce specifications:** readOnce
 
-Again, the exact numbers for the paper rely on the whole corpus of 11 packages. However, by running on the subset of the corpus that we are able to provide openly, the same conclusions can be drawn: that indeed, the specifications provided by the CamFort are highly applicable to numerical computing programs, and that the choice of combinators in the language is well supported by the data.
+The exact numbers for Section 7 paper rely on the whole corpus of 11 packages. However, by running on the subset of the corpus that we are able to provide openly, the same conclusions can be drawn: that indeed, the specifications provided by the CamFort are highly applicable to numerical computing programs, and that the choice of combinators in the specification language is well supported by the data.
 
 ## End ##
 
-This is the end of the artifact guide. Thanks for your time. CamFort continues to be actively developed (open-source) and to attract new collaborators to the project.
+This is the end of the artifact guide. Thanks for your time. CamFort continues to be actively developed (open-source) and we hope to attract new collaborators to the project.
