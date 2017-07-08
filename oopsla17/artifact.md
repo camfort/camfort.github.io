@@ -1,6 +1,6 @@
 # Verifying Spatial Properties of Array Computations - Artifact guide
 
-This artifact contains the code necessary to reproduce our study of array programming idioms in scientific/numerical Fortran code (Section 2 of the paper), to demonstrate the inference, checking, and specification synthesis features of our verification tool via examples (Section 3 of the paper), and to reproduce the statistics describing the various kinds of specifications that can be inferred over our test corpus (Section 7 of the paper).
+This artifact contains the code necessary to reproduce our study of array programming idioms in scientific/numerical Fortran code (Section 2 of the paper), to demonstrate the inference, checking, and specification synthesis features of our verification tool via examples (Section 3 of the paper), and to produce statistics describing the various kinds of specifications that can be inferred over our test corpus (Section 7 of the paper).
 
 In Section 2.1 of the paper we list the software packages that we included in our corpus. Due to licensing restrictions we can only include 6 of 11 in the artifact but in most cases the authors are willing to make them available through various mechanisms. We include a set of links and notes later for the source of each package.
 
