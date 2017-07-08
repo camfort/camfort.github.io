@@ -14,7 +14,7 @@ Note, that all of our tools are open-source and can be found at:
 
 The artifact is provided as a VirtualBox appliance. We tested it using VirtualBox version 5.1.22 r11512 on macOS Sierra (10.12.15) and El Capitan (10.11.6) but other modern versions of VirtualBox on other platforms should also work. A single user camfort with password camfort has been created.
 
-1. **Install VirtualBox** by following the instructions at [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads) to install a version of VirtualBox for your operating system.I 
+1. **Install VirtualBox** by following the instructions at [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads) to install a version of VirtualBox for your operating system. 
 
 2. **Download the appliance** from [https://drive.google.com/uc?id=0B1r6892bkvdFemJVQ1JKNTZLcDQ&export=download](https://drive.google.com/uc?id=0B1r6892bkvdFemJVQ1JKNTZLcDQ&export=download)
 
@@ -28,7 +28,7 @@ The artifact is provided as a VirtualBox appliance. We tested it using VirtualBo
 
        camfort stencils-infer camfort/samples/stencils/simple.f90
 
-Which should returning the following output, informed the user of the inferred specificaitons for the code:
+This should return the following output, informing the user of the inferred specificaitons for `simple.f90`:
 
     Inferring stencil specs for 'camfort/samples/stencils/simple.f90'
 
@@ -62,7 +62,7 @@ The example for the one-dimensional discrete Laplace transform was given in Sect
 
 7. Now that the array computation has a specification we can use CamFort to check the code against it: `camfort stencils-check laplace.f90`
 
-8. We can now try introducing an indexing error into the source code and see if it is detected by CamFort as conflicting with the stencil specification. Open the file (e.g. use `gedit`) and change the array index `i-1` on line 15 to `i+1`.
+8. We can now try introducing an indexing error into the source code and see if it is detected by CamFort as conflicting with the stencil specification. Open the file (e.g. use `gedit laplace.f90`) and change the array index `i-1` on line 15 to `i+1`.
 
 9. Check the code against the specification using `camfort stencils-check laplace.f90`
 
@@ -79,7 +79,7 @@ The example for the one-dimensional discrete Laplace transform was given in Sect
     
                      stencil (forward(depth=1, dim=1)) :: a
 
-10. From the output we can see that the code behaviour has been inferred to be forward rather than centered and so an error is returned.
+10. From the output we can see that the code behaviour has been inferred as "forward" rather than "centered" and so a verification error is returned.
 
 ### Navier (Section 1 of the paper)
 
