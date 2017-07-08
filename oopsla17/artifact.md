@@ -6,13 +6,15 @@ In Section 2.1 of the paper we list the software packages that we included in ou
 
 Note, that all of our tools are open-source and can be found at:
 
-* [https://github.com/camfort/camfort](https://github.com/camfort/camfort) - The main CamFort verification tool
+* [https://github.com/camfort/camfort](https://github.com/camfort/camfort) - The main CamFort verification tool (also builds on our Fortran parsing/analysis library [https://github.com/camfort/fortran-src](https://github.com/camfort/fortran-src).
 * [https://github.com/camfort/array-analyse](https://github.com/camfort/array-analyse) - Static analysis tool used for Section 2
 * [https://github.com/camfort/camfort-analyse](https://github.com/camfort/camfort-analyse) - Evaluation scripts used in Section 7
 
+The revisions used in this artifact have been tagged with 'artifact2017'.
+
 # Getting started
 
-The artifact is provided as a VirtualBox appliance. We tested it using VirtualBox version 5.1.22 r11512 on macOS Sierra (10.12.15) and El Capitan (10.11.6) but other modern versions of VirtualBox on other platforms should also work. A single user camfort with password camfort has been created.
+The artifact is provided as a VirtualBox appliance. We tested it using VirtualBox version 5.1.22 r11512 on macOS Sierra (10.12.15), El Capitan (10.11.6), and Linux (distribution Mint 17) but other modern versions of VirtualBox on other platforms should also work. A single user camfort with password camfort has been created.
 
 1. **Install VirtualBox** by following the instructions at [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads) to install a version of VirtualBox for your operating system. 
 
