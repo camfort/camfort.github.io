@@ -207,9 +207,9 @@ In Section 7 of the paper we summarize the various kinds of specifications found
 
 1. Change to the directory: `/home/camfort/camfort-analyse`
 
-2. Start a run (expected run-time ~1-2 hours) by typing: `./eval/infer.sh`
+2. Start a run (expected run-time ~1-2 hours) by typing: `specification-analysis.sh`
 
-    1. You can edit the list of files by opening the file `./eval/files.sh` and editing the DIRS environment variable.
+    1. You can edit the list of files by opening the file `/home/camfort/camfort-analyse/eval/files.sh` and editing the DIRS environment variable.
 
 3. Examine the output of the most recent run: `./eval/last.sh`
 
@@ -302,3 +302,7 @@ In the paper we report the following quantities all of which are defined by a pa
 11. **readOnce specifications:** readOnce
 
 Again, the exact numbers for the paper rely on the whole corpus of 11 packages. However, by running on the subset of the corpus that we are able to provide openly, the same conclusions can be drawn: that indeed, the specifications provided by the CamFort are highly applicable to numerical computing programs, and that the choice of combinators in the language is well supported by the data.
+
+## End ##
+
+This is the end of the artifact guide. Thanks for your time. CamFort continues to be actively developed (open-source) and to attract new collaborators to the project.
