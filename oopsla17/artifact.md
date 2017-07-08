@@ -26,7 +26,7 @@ The artifact is provided as a VirtualBox appliance. We tested it using VirtualBo
 
 6. Make sure you can run the camfort tool. For example, try
 
-     camfort stencils-infer camfort/samples/stencils/decomposed-three-point.f90 
+       camfort stencils-infer camfort/samples/stencils/decomposed-three-point.f90 
 
 Which should returning the following output, informed the user of the inferred specificaitons for the code:
 
