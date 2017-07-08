@@ -49,10 +49,10 @@ The example for the one-dimensional discrete Laplace transform was given in Sect
 
 3. Use CamFort to infer the stencil specification: `camfort stencils-infer laplace.f90`
 
-      Inferring stencil specs for 'laplace.f90'
+       Inferring stencil specs for 'laplace.f90'
 
-      laplace.f90
-      (14:2)-(14:32)    stencil readOnce, (centered(depth=1, dim=1)) :: a
+       laplace.f90
+       (14:2)-(14:32)    stencil readOnce, (centered(depth=1, dim=1)) :: a
 
 4. From the output we see that on line 14, CamFort has determined that the array variable `a` is read with a centered spatial pattern of depth 1.
 
@@ -66,11 +66,10 @@ The example for the one-dimensional discrete Laplace transform was given in Sect
 
 9. Check the code against the specification using `camfort stencils-check laplace.f90`
 
-     Checking stencil specs for 'laplace.f90'
+       Checking stencil specs for 'laplace.f90'
 
-     laplace.f90
-
-     (14:2)-(14:53)    Not well specified.
+       laplace.f90
+       (14:2)-(14:53)    Not well specified.
 
               Specification is:
 
@@ -88,8 +87,8 @@ Section 1 of the paper also refers to code from a Navier-Stokes fluid model. A F
 
 The example in Section 1 of the paper gives the computation to compute `du2dx` from `u`, `duvdy` from `u` and `v` and so on. This is implemented in `/home/camfort/corpus/navier/fortran/simulation_mod.f90` on lines 22 to 35. After inspecting the file you can use CamFort to synthesise the stencil specifications:
 
-   cd /home/camfort/corpus/navier/fortran
-   camfort stencils-synth --inplace .
+    cd /home/camfort/corpus/navier/fortran
+    camfort stencils-synth --inplace .
 
 (Note that the trailing 'dot' is significant: this indicates to CamFort that it should process all the files in the current directory.)
 
@@ -113,9 +112,9 @@ The examples in order are:
 
 3. `combined-region.f90` (Section 3 of the paper) shows a nine-point stencil using the intersection operator `*` and a five-point stencil built using the union operator `+`.
 
-4. `region-declaration.f90` (Section 3 of the paper) shows a declaration for the Roberts Cross stencil which can be reused within a program for clarity. Try using camfort stencils-check to validate the code against the specification already given in this file.
+4. `region-declaration.f90` (Section 3 of the paper) shows a declaration for the Roberts Cross stencil which can be reused within a program for clarity. Try using `camfort stencils-check` to validate the code against the specification already given in this file.
 
-5. `approx.f90` (Section 3 of the paper) cannot be specified exactly with the specification language and so CamFort will infer a pair of atLeast and an atMost specifications to bound its behaviour.
+5. `approx.f90` (Section 3 of the paper) cannot be specified exactly with the specification language and so CamFort will infer a pair of `atLeast` and an `atMost` specifications to bound its behaviour.
 
 6. `relativisation.f90` (Section 3 of the paper) contains an array update to a subscript with a non-zero offset (i.e. the update is at `i+1` rather than `i`). CamFort is able to generate a stencil specification relative to this offset (try `stencil-infer`).
 
@@ -164,15 +163,15 @@ Where possible we have included packages from our corpus in `/home/camfort/corpu
 
 2. Perform an analysis on one of the corpus packages, e.g., navier, by running: 
 
-    array-analysis navier 
+       array-analysis navier 
 
 3. This generate a summary of the results and a data file `navier.restart`. The summary data can be reviewed at any time by running:
 
-    array-analysis VIEW navier
+       array-analysis VIEW navier
 
 4. The raw data can be analysed/categorised to generate data matching the format of the different data analyses in Section 2.2 by using the `study` program:
 
-    study navier.restart
+       study navier.restart
     
 This generates tables of data matching the categorisations used in Section 2.2. 
 
@@ -184,12 +183,12 @@ Note that the results of the paper are based on the aggregated data of all 11 pa
 
 2. Perform an analysis and study on the whole corpus directory by running
 
-    array-analysis-per-directory.sh 
-    study combined.restart
+       array-analysis-per-directory.sh 
+       study combined.restart
 
 Or perform the analyses of each corpus package in parallel with
 
-    array-analysis-per-directory.sh par
+       array-analysis-per-directory.sh par
 
 Note, this could take some time, e.g. 2 hours on a standard Mac Book Pro (2.7Ghz Core i5, 8Gb RAM).
 
