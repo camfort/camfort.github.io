@@ -140,7 +140,7 @@ Where possible we have included packages from our corpus in `/home/camfort/corpu
 
 5. SPECFEM3D, global seismic wave models, source code is available at [https://github.com/geodynamics/specfem3d](https://github.com/geodynamics/specfem3d). We used the version at commit 48c539b730dcdaa845bad930d5790e5cdbbba5c7 which we then patched for standards compliance with `/home/camfort/patches/specfm3d.patch`.
 
-6. Cliffs, a tsunami model, source code is available at [https://github.com/Delta-function/cliffs-src](https://github.com/Delta-function/cliffs-src).  We used the version at commit 137583958c37ce466b81ce2ec1611fbd64c16ac5. We converted the repository to comply to the Fortran 90 standard using the script `/home/camfort/patches/cliffssrc.sh`
+6. Cliff's, a tsunami model, source code is available at [https://github.com/Delta-function/cliffs-src](https://github.com/Delta-function/cliffs-src).  We used the version at commit 137583958c37ce466b81ce2ec1611fbd64c16ac5. We converted the repository to comply to the Fortran 90 standard using the script `/home/camfort/patches/cliffssrc.sh`
 
 **Not included but can be downloaded**
 
@@ -216,7 +216,7 @@ The full list of relevant keys is as follows:
 
 * **dimTagN** is the number of arrays with dimensionality N.
 
-* **dimsN **is the number of specifications with N dim= terms in them.
+* **dimsN** is the number of specifications with N dim= terms in them.
 
 * **emptySpec** is the number of potential stencils which had no specification.
 
@@ -224,13 +224,13 @@ The full list of relevant keys is as follows:
 
 * **justPointed** is the number of specifications which were pointed only.
 
-* **lexFailed **is the number of files that failed in the lexer.
+* **lexFailed** is the number of files that failed in the lexer.
 
 * **lexOrParseFailed** is the number of files that failed in the lexer or parser.
 
-* **linesParsed **is the number of lines of code successfully parsed.
+* **linesParsed** is the number of lines of code successfully parsed.
 
-* **linesTotal **is the number of lines of code processed whether successfully or not.
+* **linesTotal** is the number of lines of code processed whether successfully or not.
 
 * **plusOpsN** is the number of specifications with N union `+` operators.
 
@@ -242,7 +242,7 @@ The full list of relevant keys is as follows:
 
 * **multiActionRegionOpsN** is the number of multiAction specifications with N region operations (of either kind).
 
-* **nonNeighbour **is the number of specifications where indices were not neighbours.
+* **nonNeighbour** is the number of specifications where indices were not neighbours.
 
 * **numStencilLines** is the number of lines generated with specifications.
 
@@ -252,7 +252,7 @@ The full list of relevant keys is as follows:
 
 * **parseOk** is the number of files that successfully parsed.
 
-* **sadepthN **is the number of specifications of depth N with only a single action.
+* **sadepthN** is the number of specifications of depth N with only a single action.
 
 * **singleAction** is the number of specifications with only a single action.
 
@@ -266,30 +266,30 @@ The full list of relevant keys is as follows:
 
 * **LHSnotHandled** is the number of specifications for which Camfort cannot handle the LHS.
 
-* **relativized **is the number of specifications where offsets had to be shifted in order to infer them correctly.
+* **relativized** is the number of specifications where offsets had to be shifted in order to infer them correctly.
 
 In the paper we report the following quantities all of which are defined by a particular key in the summary:
 
-1. **All stencil (and access) specifications: **tickAssignSuccess
+1. **All stencil (and access) specifications:** tickAssignSuccess
 
-2. **Specifications which are pointed only: **justPointed
+2. **Specifications which are pointed only:** justPointed
 
-3. **Single-action specifications **(one forward, backward or centered region combined with any number of pointed regions)**: **singleAction
+3. **Single-action specifications** (one forward, backward or centered region combined with any number of pointed regions) singleAction
 
 4. **Single-action with a non-pointed modifier**: singleActionIrr
 
-5. **Multi-action specifications **(at least 2 forward, backward or centered regions combined with any number of pointed regions)**: **multiAction
+5. **Multi-action specifications** (at least 2 forward, backward or centered regions combined with any number of pointed regions) multiAction
 
-6. **Multi-action only using intersection (*): **multiActionMulOnly
+6. **Multi-action only using intersection (*):** multiActionMulOnly
 
 7. **Specifications with N intersection (*) operators**:  mulOps0, mulOps1, mulOps2, etc.
 
 8. **Specifications with N union (+) operators**:  plusOps0, plusOps1, plusOps2, etc.
 
-9. **Upper-bounded specifications: **atMost
+9. **Upper-bounded specifications:** atMost
 
 10. **Lower-bounded specifications**: atLeast
 
-11. **readOnce specifications: **readOnce
+11. **readOnce specifications:** readOnce
 
 Again, the exact numbers for the paper rely on the whole corpus of 11 packages. However, by running on the subset of the corpus that we are able to provide openly, the same conclusions can be drawn: that indeed, the specifications provided by the CamFort are highly applicable to numerical computing programs, and that the choice of combinators in the language is well supported by the data.
