@@ -24,17 +24,16 @@ The artifact is provided as a VirtualBox appliance. We tested it using VirtualBo
 
 5. **Click the ‘Log in’ button** to sign in as camfort once the VM has booted
 
-6. Make sure you can run the camfort tool. For example, try
+6. You should be presented with a terminal. Make sure you can run the `camfort` tool. For example, try
 
-       camfort stencils-infer camfort/samples/stencils/decomposed-three-point.f90 
+       camfort stencils-infer camfort/samples/stencils/simple.f90
 
 Which should returning the following output, informed the user of the inferred specificaitons for the code:
 
-      Inferring stencil specs for 'camfort/samples/stencils/decomposed-three-point.f90'
+    Inferring stencil specs for 'camfort/samples/stencils/simple.f90'
 
-      camfort/samples/stencils/decomposed-three-point.f90
-
-      (16:2)-(16:28)    stencil readOnce, (centered(depth=1, dim=1)) :: a
+    camfort/samples/stencils/simple.f90
+    (12:9)-(12:67)    stencil readOnce, (pointed(dim=1))*(centered(depth=1, dim=2)) + (centered(depth=1, dim=1))*(pointed(dim=2)) :: a
 
 # Step-by-step instructions
 
