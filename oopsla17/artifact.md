@@ -1,6 +1,6 @@
 # Verifying Spatial Properties of Array Computations - Artifact guide
 
-This artifact contains the code necessary to reproduce our study of array programming idioms in scientific/numerical Fortran code (Section 2 of the paper), to test the examples of the stencil specification language and inference (Section 3 of the paper), and to reproduce the statistics describing the various kinds of stencils found (Section 7 of the paper).
+This artifact contains the code necessary to reproduce our study of array programming idioms in scientific/numerical Fortran code (Section 2 of the paper), to demonstrate the inference, checking, and specification synthesis features of our verification tool via examples (Section 3 of the paper), and to reproduce the statistics describing the various kinds of specifications that can be inferred over our test corpus (Section 7 of the paper).
 
 In Section 2.1 of the paper we list the software packages that we included in our corpus. Due to licensing restrictions we can only include 6 of 11 in the artifact but in most cases the authors are willing to make them available through various mechanisms. We include a set of links and notes later for the source of each package.
 
@@ -12,7 +12,7 @@ Note, that all of our tools are open-source and can be found at:
 
 # Getting started
 
-The artifact is provided as a VirtualBox appliance. We tested it using VirtualBox version 5.1.22 r11512 on macOs Sierra (10.12.15) but other modern versions of VirtualBox on other platforms should also work. A single user camfort with password camfort has been created.
+The artifact is provided as a VirtualBox appliance. We tested it using VirtualBox version 5.1.22 r11512 on macOS Sierra (10.12.15) and El Capitan (10.11.6) but other modern versions of VirtualBox on other platforms should also work. A single user camfort with password camfort has been created.
 
 1. **Install VirtualBox** by following the instructions at [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads) to install a version of VirtualBox for your operating system.I 
 
@@ -102,23 +102,23 @@ Sections 2 and 3 of the paper contain a variety of small examples demonstrating 
 
 Or to synthesis an inferred specification inplace
 
-    camfort stencil-synth --inplace *filename*
+    camfort stencils-synth --inplace *filename*
 
 The examples in order are:
 
-1. `decomposed-three-part.f90` (Section 2.1 of the paper) shows how CamFort will track data flow in order to derive the correct stencil for an array update.
+1. `decomposed-three-part.f90` (Section 2.1 of the paper) shows how CamFort will track data flow in order to derive the correct specification for an array update.
 
-2. `single-region.f90` (Section 3 of the paper) demonstrates five single region stencils (i.e. not using the region combination operators + and *). Note that the inferred specifications here get an extra qualifier `readOnly` which was not shown in the paper for the purpose of introducing the language incrementally.
+2. `single-region.f90` (Section 3 of the paper) demonstrates five single region stencils (i.e. specifications do not use the region combination operators + and *). Note that the inferred specifications here get an extra qualifier `readOnly` which was not explained at the point in the paper where this example first appears (for the purpose of introducing the language incrementally).
 
-3. `combined-region.f90` (Section 3 of the paper) shows a nine-point stencil using the intersection operator `*` and a five-point stencil built using the union operator `+`.
+3. `combined-region.f90` (Section 3 of the paper) shows a nine-point stencil specification using the intersection operator `*` and a five-point stencil specification built using the union operator `+`.
 
-4. `region-declaration.f90` (Section 3 of the paper) shows a declaration for the Roberts Cross stencil which can be reused within a program for clarity. Try using `camfort stencils-check` to validate the code against the specification already given in this file.
+4. `region-declaration.f90` (Section 3 of the paper) shows a declaration for the Roberts Cross stencil pattern which can be reused within a program for clarity. Try using `camfort stencils-check` to validate the code against the specification already given in this file.
 
 5. `approx.f90` (Section 3 of the paper) cannot be specified exactly with the specification language and so CamFort will infer a pair of `atLeast` and an `atMost` specifications to bound its behaviour.
 
-6. `relativisation.f90` (Section 3 of the paper) contains an array update to a subscript with a non-zero offset (i.e. the update is at `i+1` rather than `i`). CamFort is able to generate a stencil specification relative to this offset (try `stencil-infer`).
+6. `relativisation.f90` (Section 3 of the paper) contains an array update to a subscript with a non-zero offset (i.e. the update is at `i+1` rather than `i`). CamFort is able to generate a stencil specification relative to this offset (try `camfort stencils-infer samples/stencils/relativisation.f90`).
 
-7. `access.f90` (Section 3 of the paper) does not contain a stencil computation. Instead, it contains an update to a variable based on an array access, computing the maximum of an array. CamFort therefore will generate an `access` specification for this.
+7. `access.f90` (Section 3 of the paper) does not contain a stencil computation. Instead, it contains an array computation of the maximum element in an array. CamFort therefore will generate an `access` specification for this, distinguishing the programming pattern from a stencil computation.
 
 ## Empirical study of array computations (Section 2 of the paper)
 
@@ -236,7 +236,7 @@ The full list of relevant keys is as follows:
 
 * **mulOpsN** is the number of specifications with N intersection `*` operators.
 
-* **regionOpsN** is the number of stencils with N region operators (of either kind).
+* **regionOpsN** is the number of specifications with N region operators (of either kind).
 
 * **multiAction** is the number of specifications with more than one action.
 
@@ -292,4 +292,4 @@ In the paper we report the following quantities all of which are defined by a pa
 
 11. **readOnce specifications: **readOnce
 
-Again, the exact numbers for the paper will rely on getting the whole corpus. However, by running on the subset of the corpus that we are able to provide openly, the same conclusions can be drawn: that indeed, the specifications provided by the CamFort are highly applicable to numerical computing programs, and that the choice of combinators in the language is well supported by the data.
+Again, the exact numbers for the paper rely on the whole corpus of 11 packages. However, by running on the subset of the corpus that we are able to provide openly, the same conclusions can be drawn: that indeed, the specifications provided by the CamFort are highly applicable to numerical computing programs, and that the choice of combinators in the language is well supported by the data.
