@@ -41,15 +41,25 @@ rel="stylesheet" />
   code. Its features are primarily aimed at programming patterns found
   in numerical modelling code e.g., in computational science.  </p>
   <p>
-  CamFort is free and open-source. It currently supports FORTRAN 66,
-  FORTRAN 77, and Fortran 90 language standards. Support for Fortran
-  95, 2003, and 2008 is in progress.
+  CamFort is free and open-source. It currently supports Fortran 66, 77, 90,
+  and 95 language standards. Support for Fortran 2003, and 2008 is in progress.
   </p>
 </section>
 
  <section><span class="title-medium">News / dates</span>
   <p>
 <ul id="news">
+  <li><b>18th May 2018</b> -
+    <a href="https://github.com/camfort/camfort/releases/tag/v0.905">
+      v0.905 of CamFort has been released
+    </a>. The main changes are:
+    <ul>
+      <li>Extended support for Fortran 95 &amp; legacy extensions;</li>
+      <li>Improved units-of-measure checking (performance &amp; functionality)</li>
+      <li>Prototype for Hoare logic style verification assertions back by SMT solving</li>
+    </ul><br>
+  </li>
+
   <li><b>26th July 2017</b> -
     <a href="https://github.com/camfort/camfort/releases/tag/v0.904">
       v0.904 of CamFort has been released
@@ -86,7 +96,7 @@ rel="stylesheet" />
   <section> <span class="title-medium">Features</span><br />
   <span class="title-medium-alt">Specification & verification</span>
   <p>
-  CamFort provides <em>lightweight verification</em> features. 
+  CamFort provides <em>lightweight verification</em> features.
   Source-code annotations (comments) provide specifications of certain
   aspects of a program's meaning or behaviour. CamFort can then check
   that code conforms to these specifications. CamFort can also suggest
@@ -129,7 +139,7 @@ rel="stylesheet" />
   </ul>
   </p>
   </section>
-  
+
   <section> <span class="title-medium-alt">Refactoring</span><br />
   <p>
   Many language features of older Fortran standards (pre Fortran 90) are
@@ -142,7 +152,7 @@ rel="stylesheet" />
   programming practices.
   </p>
   </section>
-  
+
   <section>
   <span class="title-medium">Long-term
   vision</span><br />
@@ -153,17 +163,17 @@ rel="stylesheet" />
   grow more complex, it is increasingly difficult to deliver on core
   requirements such as verifiability, maintainability,
   understandability, validity, and portability.
-  
+
   </p>
   <p>
-  
+
   Managing software complexity more effectively has been a focus of
   programming language research for many years, yet we see little
   adoption of new approaches in the natural sciences. Instead we see
   scientists continually striving to evolve their software to more
   complex models, or bigger data sets or novel execution
   architectures.
-  
+
   </p>
   <p>
   Our objectives are:
@@ -195,9 +205,9 @@ rel="stylesheet" />
     <span class="title-small">Download</span><br />
     The source code for CamFort is hosted on
     <a href="https://github.com/camfort/camfort">GitHub</a>.<br /><br />
-    Latest binary release for Windows, Mac OS, and Linux: 
+    Latest binary release for Windows, Mac OS, and Linux:
     <a
-    href="https://github.com/camfort/camfort/releases">v0.904 (July 2017)</a>.
+    href="https://github.com/camfort/camfort/releases">v0.905 (May 2018)</a>.
     </section>
 
     <section>
@@ -212,13 +222,13 @@ rel="stylesheet" />
     <a href="team.html" class="menu_button">Team</a><br /><br />
     <a href="publications.html" class="menu_button">Publications</a>
     </section>
-    
+
     <section>
     <span class="title-small">Mailing list</span><br />
     For help and announcements you can sign-up to our
     <a href="https://lists.cam.ac.uk/mailman/listinfo/cl-camfort">mailing list</a>.
     </section>
-    
+
     <section>
     <span class="title-small">Events</span><br />
     An introduction to CamFort and training material is provided
@@ -241,7 +251,7 @@ rel="stylesheet" />
     style="top:15px;width:170px;position:relative;top:-9px;" />
     <img alt="kent" src='tvcs2017/kent-logo.jpg' class="logo"
     style="width:90px;"
-  />    
+  />
     </center>
     </section>
   </div>
