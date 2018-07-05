@@ -3,16 +3,26 @@
   CamFort is a multi-feature tool for improving the quality of Fortran
   code. Its features are primarily aimed at programming patterns found
   in numerical modelling code e.g., in computational science.  </p>
-  <p>
-  CamFort is free and open-source. It currently supports FORTRAN 66,
-  FORTRAN 77, and Fortran 90 language standards. Support for Fortran
-  95, 2003, and 2008 is in progress.
+<p>
+  CamFort is free and open-source. It currently supports Fortran 66, 77, 90,
+  and 95 language standards. Support for Fortran 2003, and 2008 is in progress.
   </p>
 </section>
 
  <section><span class="title-medium">News / dates</span>
   <p>
 <ul id="news">
+  <li><b>18th May 2018</b> -
+    <a href="https://github.com/camfort/camfort/releases/tag/v0.905">
+      v0.905 of CamFort has been released
+    </a>. The main changes are:
+    <ul>
+      <li>Extended support for Fortran 95 &amp; legacy extensions;</li>
+      <li>Improved units-of-measure checking (performance &amp; functionality)</li>
+      <li>Prototype for Hoare logic style verification assertions back by SMT solving</li>
+    </ul><br>
+  </li>
+
   <li><b>October 2017</b> -
   Our paper <a
   href="https://www.repository.cam.ac.uk/bitstream/handle/1810/267779/oopsla-proof.pdf?sequence=5">
@@ -31,7 +41,7 @@
        <li>Bug fixes to stencil specifications</li>
      </ul><br>
    </li>
-  
+
   <li><b>24-26th July 2017</b> - We are talking about CamFort at the
   <a
   href="http://www.nag.co.uk/content/fortran-modernization-workshop/barcelona-july-2017">Fortran
@@ -57,7 +67,7 @@
   <section> <span class="title-medium">Features</span><br />
   <span class="title-medium-alt">Specification & verification</span>
   <p>
-  CamFort provides <em>lightweight verification</em> features. 
+  CamFort provides <em>lightweight verification</em> features.
   Source-code annotations (comments) provide specifications of certain
   aspects of a program's meaning or behaviour. CamFort can then check
   that code conforms to these specifications. CamFort can also suggest
@@ -100,7 +110,7 @@
   </ul>
   </p>
   </section>
-  
+
   <section> <span class="title-medium-alt">Refactoring</span><br />
   <p>
   Many language features of older Fortran standards (pre Fortran 90) are
@@ -113,7 +123,7 @@
   programming practices.
   </p>
   </section>
-  
+
   <section>
   <span class="title-medium">Long-term
   vision</span><br />
@@ -124,17 +134,17 @@
   grow more complex, it is increasingly difficult to deliver on core
   requirements such as verifiability, maintainability,
   understandability, validity, and portability.
-  
+
   </p>
   <p>
-  
+
   Managing software complexity more effectively has been a focus of
   programming language research for many years, yet we see little
   adoption of new approaches in the natural sciences. Instead we see
   scientists continually striving to evolve their software to more
   complex models, or bigger data sets or novel execution
   architectures.
-  
+
   </p>
   <p>
   Our objectives are:
