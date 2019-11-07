@@ -7,66 +7,65 @@
   CamFort is free and open-source. It currently supports Fortran 66, 77, 90,
   and 95 language standards. Support for Fortran 2003, and 2008 is in progress.
   </p>
-</section>
+  </section>
 
- <section><span class="title-medium">News / dates</span>
+  <section>
+  <span class="title-medium">Long-term
+  vision</span><br />
   <p>
-<ul id="news">
-  <li><b>18th May 2018</b> -
-    <a href="https://github.com/camfort/camfort/releases/tag/v0.905">
-      v0.905 of CamFort has been released
-    </a>. The main changes are:
-    <ul>
-      <li>Extended support for Fortran 95 &amp; legacy extensions;</li>
-      <li>Improved units-of-measure checking (performance &amp; functionality)</li>
-      <li>Prototype for Hoare logic style verification assertions back by SMT solving</li>
-    </ul><br>
-  </li>
 
-  <li><b>October 2017</b> -
-  Our paper <a
-  href="https://www.repository.cam.ac.uk/bitstream/handle/1810/267779/oopsla-proof.pdf?sequence=5">
-  Verifying Spatial Properties of Array Computations</a> has been
-  accepted at the ACM OOPSLA 2017 conference. Dominic will present the
-  paper in Vancouver on 26th of October.</li><br />
-<li><b>26th July 2017</b> -
-     <a href="https://github.com/camfort/camfort/releases/tag/v0.904">
-       v0.904 of CamFort has been released
-    </a>. The main changes are:
-     <ul>
-       <li>Better protection against dependencies breaking builds;</li>
-       <li>Significantly reduced build time;</li>
-       <li>Better command line interface;</li>
-       <li>Improved error messages;</li>
-       <li>Bug fixes to stencil specifications</li>
-     </ul><br>
-   </li>
+  Programming languages provide an interface for developing
+  increasingly complex models in science. However, as computer models
+  grow more complex, it is increasingly difficult to deliver on core
+  requirements such as verifiability, maintainability,
+  understandability, validity, and portability.
 
-  <li><b>24-26th July 2017</b> - We are talking about CamFort at the
-  <a
-  href="http://www.nag.co.uk/content/fortran-modernization-workshop/barcelona-july-2017">Fortran
-  modernization workshop</a>
-  at Universitat Politechnica de Catalunya, Barcelona, Spain.
-  (<a
-  href="http://www.nag.co.uk/content/fortran-modernization-workshop/barcelona-july-2017">details</a>).
-  </li><br />
-  <li><b>30th May 2017</b> - <a
-  href="https://github.com/camfort/camfort/releases/tag/v0.902">
-  v0.902 of CamFort has been released</a>. The main changes are:
-  <ul><li>Improved stencil specification support;</li>
-      <li>Polymorphic unit signatures (see <a
-  href="https://github.com/camfort/camfort/blob/master/samples/units/poly1.f90">this
-  example</a>);</li>
-  <li>Much faster verification times.</li>
-  </ul>
-  </li>
+  </p>
+  <p>
+
+  Managing software complexity more effectively has been a focus of
+  programming language research for many years, yet we see little
+  adoption of new approaches in the natural sciences. Instead we see
+  scientists continually striving to evolve their software to more
+  complex models, or bigger data sets or novel execution
+  architectures.
+
+  </p>
+  <p>
+  Our objectives are:
+  <ul>
+    <li>
+<b>Crossing the chasm:</b> To show how programming language ideas such as
+  inference of high-level programming patterns, advanced types and
+  automatic test generation can be used to reduce the accidental
+  complexity of real scientific code, and improve its evolution,
+    maintainability, and verification.</li>
+    <li>
+<b>Practical adoption:</b> To develop tools for maintaining and evolving
+  established, long-lived code-bases. To apply these ideas without
+  disrupting existing practices by accommodating the various
+    incarnations of the language, and (custom) pre-processors.</li>
+    <li>
+<b>Closing the chasm:</b> To provide a framework which makes it easier to
+  transfer future programming language research in to practice in
+    computational science.
+    </li>
   </ul>
   </p>
   </section>
 
-  <section> <span class="title-medium">Usage</span><br />
-  <p>Please see our <a href="https://github.com/camfort/camfort/wiki">Wiki page</a> for command-line usage information.</p>
+  <section>
+    <span class="title-medium">Getting involved</span><br />
+  
+    <p>
+  <or>
+    <li>Fortran developers: try CamFort on your code! Feel free to report bugs and make feature requests on our <a href="https://github.com/camfort/camfort/issues">issue tracker.</a></li>
+    <li>Haskell programmers: CamFort is written in Haskell! We welcome contributions although contact us before embarking on a large project so we can give you feedback.</li>
+    <li>Students: We have a variety of ideas on our <a href="projects.html">project page</a>.</li>
+  </or>
+    </p>
   </section>
+
 
   <section> <span class="title-medium">Features</span><br />
   <span class="title-medium-alt">Specification & verification</span>
@@ -128,47 +127,3 @@
   </p>
   </section>
 
-  <section>
-  <span class="title-medium">Long-term
-  vision</span><br />
-  <p>
-
-  Programming languages provide an interface for developing
-  increasingly complex models in science. However, as computer models
-  grow more complex, it is increasingly difficult to deliver on core
-  requirements such as verifiability, maintainability,
-  understandability, validity, and portability.
-
-  </p>
-  <p>
-
-  Managing software complexity more effectively has been a focus of
-  programming language research for many years, yet we see little
-  adoption of new approaches in the natural sciences. Instead we see
-  scientists continually striving to evolve their software to more
-  complex models, or bigger data sets or novel execution
-  architectures.
-
-  </p>
-  <p>
-  Our objectives are:
-  <ul>
-    <li>
-<b>Crossing the chasm:</b> To show how programming language ideas such as
-  inference of high-level programming patterns, advanced types and
-  automatic test generation can be used to reduce the accidental
-  complexity of real scientific code, and improve its evolution,
-    maintainability, and verification.</li>
-    <li>
-<b>Practical adoption:</b> To develop tools for maintaining and evolving
-  established, long-lived code-bases. To apply these ideas without
-  disrupting existing practices by accommodating the various
-    incarnations of the language, and (custom) pre-processors.</li>
-    <li>
-<b>Closing the chasm:</b> To provide a framework which makes it easier to
-  transfer future programming language research in to practice in
-    computational science.
-    </li>
-  </ul>
-  </p>
-  </section>

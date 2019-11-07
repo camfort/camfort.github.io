@@ -44,100 +44,65 @@ rel="stylesheet" />
   CamFort is free and open-source. It currently supports Fortran 66, 77, 90,
   and 95 language standards. Support for Fortran 2003, and 2008 is in progress.
   </p>
-</section>
+  </section>
 
- <section><span class="title-medium">News / dates</span>
+  <section>
+  <span class="title-medium">Long-term
+  vision</span><br />
   <p>
-<ul id="news">
-  <li><b>30th August 2019</b> -
-    <a href="https://github.com/camfort/camfort/releases/tag/v1.0">
-      v1.0 of CamFort has been released
-    </a>. The main changes are:
-    <ul>
-      <li>Update to new fortran-src version 0.4.0.</li>
-      <li>New command: basic-checks, which runs a series of other checks in Simple.hs.</li>
-      <li>Add max-lines threshold for snippets output, currently 5.</li>
-      <li>Rename units-compile to units-summarise/summarize.</li>
-      <li>Bring over same command-line flexibility to units-compile as 'fortran-src -c', can specify multiple files-or-directories.</li>
-      <li>Use ModGraph functionality to allow units-summarise to build dependency graphs and summarise in build-order.</li>
-      <li>Search includedir recursively for mod-files, like fortran-src.</li>
-      <li>Numerous changes to increase strictness and reduce memory usage: use Pipes, avoid constructing needlessly large graphs.</li>
-      <li>A Linux x86-64 binary bundle is available for download from the release webpage.</li>
-    </ul><br>
-  </li>
 
-  <li><b>17th June 2019</b> -
-    <a href="https://github.com/camfort/camfort/releases/tag/v0.906">
-      v0.906 of CamFort has been released
-    </a>. The main changes are:
-    <ul>
-      <li>Update to new fortran-src version 0.3.0.</li>
-      <li>Add array-check, alloc-check, use-check, fp-check and implicit-none features.</li>
-      <li>A collection of sanity checks on Fortran code looking for common issues, possible problems or potential inefficiencies.</li>
-      <li>Introduce a divide-and-conquer methodology for solving units-inference problems, reducing the size of the matrices and taking advantage of SMP where available.</li>
-      <li>Treat constant-expressions and parameter variables as literals, for units-inference purposes, making it easier to retrofit units annotations onto existing programs.</li>
-      <li>Add 'units-infer --show-ast' feature, which decorates the displayed AST (internal data structure) with units information on each expression.</li>
-      <li>Made assorted efficiency improvements to the units solver and other features, especially for large projects with many files.</li>
-      <li>Add 'units-check --dump-mod-file' feature that lets you view an 'fsmod' file's contents with regard to units info.</li>
-      <li>Allow override of Fortran version used by parser using -F option.</li>
-    </ul><br>
-  </li>
+  Programming languages provide an interface for developing
+  increasingly complex models in science. However, as computer models
+  grow more complex, it is increasingly difficult to deliver on core
+  requirements such as verifiability, maintainability,
+  understandability, validity, and portability.
 
-  <li><b>18th May 2018</b> -
-    <a href="https://github.com/camfort/camfort/releases/tag/v0.905">
-      v0.905 of CamFort has been released
-    </a>. The main changes are:
-    <ul>
-      <li>Extended support for Fortran 95 &amp; legacy extensions;</li>
-      <li>Improved units-of-measure checking (performance &amp; functionality)</li>
-      <li>Prototype for Hoare logic style verification assertions back by SMT solving</li>
-    </ul><br>
-  </li>
+  </p>
+  <p>
 
-  <li><b>October 2017</b> -
-  Our paper <a
-  href="https://www.repository.cam.ac.uk/bitstream/handle/1810/267779/oopsla-proof.pdf?sequence=5">
-  Verifying Spatial Properties of Array Computations</a> has been
-  accepted at the ACM OOPSLA 2017 conference. Dominic will present the
-  paper in Vancouver on 26th of October.</li><br />
-<li><b>26th July 2017</b> -
-     <a href="https://github.com/camfort/camfort/releases/tag/v0.904">
-       v0.904 of CamFort has been released
-    </a>. The main changes are:
-     <ul>
-       <li>Better protection against dependencies breaking builds;</li>
-       <li>Significantly reduced build time;</li>
-       <li>Better command line interface;</li>
-       <li>Improved error messages;</li>
-       <li>Bug fixes to stencil specifications</li>
-     </ul><br>
-   </li>
+  Managing software complexity more effectively has been a focus of
+  programming language research for many years, yet we see little
+  adoption of new approaches in the natural sciences. Instead we see
+  scientists continually striving to evolve their software to more
+  complex models, or bigger data sets or novel execution
+  architectures.
 
-  <li><b>24-26th July 2017</b> - We are talking about CamFort at the
-  <a
-  href="http://www.nag.co.uk/content/fortran-modernization-workshop/barcelona-july-2017">Fortran
-  modernization workshop</a>
-  at Universitat Politechnica de Catalunya, Barcelona, Spain.
-  (<a
-  href="http://www.nag.co.uk/content/fortran-modernization-workshop/barcelona-july-2017">details</a>).
-  </li><br />
-  <li><b>30th May 2017</b> - <a
-  href="https://github.com/camfort/camfort/releases/tag/v0.902">
-  v0.902 of CamFort has been released</a>. The main changes are:
-  <ul><li>Improved stencil specification support;</li>
-      <li>Polymorphic unit signatures (see <a
-  href="https://github.com/camfort/camfort/blob/master/samples/units/poly1.f90">this
-  example</a>);</li>
-  <li>Much faster verification times.</li>
-  </ul>
-  </li>
+  </p>
+  <p>
+  Our objectives are:
+  <ul>
+    <li>
+<b>Crossing the chasm:</b> To show how programming language ideas such as
+  inference of high-level programming patterns, advanced types and
+  automatic test generation can be used to reduce the accidental
+  complexity of real scientific code, and improve its evolution,
+    maintainability, and verification.</li>
+    <li>
+<b>Practical adoption:</b> To develop tools for maintaining and evolving
+  established, long-lived code-bases. To apply these ideas without
+  disrupting existing practices by accommodating the various
+    incarnations of the language, and (custom) pre-processors.</li>
+    <li>
+<b>Closing the chasm:</b> To provide a framework which makes it easier to
+  transfer future programming language research in to practice in
+    computational science.
+    </li>
   </ul>
   </p>
   </section>
 
-  <section> <span class="title-medium">Usage</span><br />
-  <p>Please see our <a href="https://github.com/camfort/camfort/wiki">Wiki page</a> for command-line usage information.</p>
+  <section>
+    <span class="title-medium">Getting involved</span><br />
+  
+    <p>
+  <or>
+    <li>Fortran developers: try CamFort on your code! Feel free to report bugs and make feature requests on our <a href="https://github.com/camfort/camfort/issues">issue tracker.</a></li>
+    <li>Haskell programmers: CamFort is written in Haskell! We welcome contributions although contact us before embarking on a large project so we can give you feedback.</li>
+    <li>Students: We have a variety of ideas on our <a href="projects.html">project page</a>.</li>
+  </or>
+    </p>
   </section>
+
 
   <section> <span class="title-medium">Features</span><br />
   <span class="title-medium-alt">Specification & verification</span>
@@ -199,75 +164,27 @@ rel="stylesheet" />
   </p>
   </section>
 
-  <section>
-  <span class="title-medium">Long-term
-  vision</span><br />
-  <p>
-
-  Programming languages provide an interface for developing
-  increasingly complex models in science. However, as computer models
-  grow more complex, it is increasingly difficult to deliver on core
-  requirements such as verifiability, maintainability,
-  understandability, validity, and portability.
-
-  </p>
-  <p>
-
-  Managing software complexity more effectively has been a focus of
-  programming language research for many years, yet we see little
-  adoption of new approaches in the natural sciences. Instead we see
-  scientists continually striving to evolve their software to more
-  complex models, or bigger data sets or novel execution
-  architectures.
-
-  </p>
-  <p>
-  Our objectives are:
-  <ul>
-    <li>
-<b>Crossing the chasm:</b> To show how programming language ideas such as
-  inference of high-level programming patterns, advanced types and
-  automatic test generation can be used to reduce the accidental
-  complexity of real scientific code, and improve its evolution,
-    maintainability, and verification.</li>
-    <li>
-<b>Practical adoption:</b> To develop tools for maintaining and evolving
-  established, long-lived code-bases. To apply these ideas without
-  disrupting existing practices by accommodating the various
-    incarnations of the language, and (custom) pre-processors.</li>
-    <li>
-<b>Closing the chasm:</b> To provide a framework which makes it easier to
-  transfer future programming language research in to practice in
-    computational science.
-    </li>
-  </ul>
-  </p>
-  </section>  </div>
+  </div>
   <div id="side">
     <a class="twitter-follow-button" href="https://twitter.com/camfort_tool"
   data-show-count="false" data-size="large">
     Follow @camfort_tool</a><br /><br /><br />
+
+    <section style='margin-top:-5pt'>
+      <a href="news.html" class="menu_button">News and releases</a><br /><br />
+      <a href="https://github.com/camfort/camfort/wiki" class="menu_button">Usage instructions</a><br /><br />
+    <a href="team.html" class="menu_button">Team</a><br /><br />
+    <a href="publications.html" class="menu_button">Publications</a><br /><br />
+    <a href="projects.html" class="menu_button">Project ideas</a>
+    </section>
+
     <section>
     <span class="title-small">Download</span><br />
     The source code for CamFort is hosted on
     <a href="https://github.com/camfort/camfort">GitHub</a>.<br /><br />
     Latest binary release for Windows, Mac OS, and Linux:
     <a
-    href="https://github.com/camfort/camfort/releases">v1.0 (Aug 2019)</a>.
-    </section>
-
-    <section>
-    <span class="title-small">Project</span><br />
-    CamFort is a joint project between the University of Cambridge
-    and University of Kent
-    supported by an <a
-  href="http://gow.epsrc.ac.uk/NGBOViewGrant.aspx?GrantRef=EP/M026124/1">EPSRC
-    grant</a>.</section>
-
-    <section style='margin-top:-5pt'>
-    <a href="team.html" class="menu_button">Team</a><br /><br />
-    <a href="publications.html" class="menu_button">Publications</a><br /><br />
-    <a href="projects.html" class="menu_button">Project ideas</a>
+    href="https://github.com/camfort/camfort/releases">v0.905 (May 2018)</a>.
     </section>
 
     <section>
@@ -293,6 +210,12 @@ rel="stylesheet" />
     </section>
 
     <section>
+    <span class="title-small">Project</span><br />
+    CamFort is a joint project between the University of Cambridge
+    and University of Kent
+    supported by an <a
+  href="http://gow.epsrc.ac.uk/NGBOViewGrant.aspx?GrantRef=EP/M026124/1">EPSRC
+    grant</a>.</section>
     <center class="logos">
     <img alt="ucam" src='tvcs2017/ucam-logo.gif' class="logo"
     style="top:15px;width:170px;position:relative;top:-9px;" />
